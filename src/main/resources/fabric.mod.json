@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "advancedalloys",
+  "version": "${version}",
+  "name": "Advanced Alloys",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Samik/advancedAlloys"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/advancedalloys/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "name.advancedalloys.client.AdvancedAlloysClient"
+    ],
+    "main": [
+      "name.advancedalloys.AdvancedAlloys"
+    ]
+  },
+  "mixins": [
+    "advancedalloys.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
