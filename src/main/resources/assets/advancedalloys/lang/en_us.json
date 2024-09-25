@@ -2,5 +2,15 @@
   "item.advancedalloys.copper_iron_ingot": "Copper-Iron Ingot",
   "item.advancedalloys.copper_gold_ingot": "Copper-Gold Ingot",
   "item.advancedalloys.gold_iron_ingot": "Gold-Iron Ingot",
+
+
+  "block.advancedalloys.gold_iron_block": "Gold-Iron Block",
+  "block.advancedalloys.copper_gold_block": "Copper-Gold Block",
+  "block.advancedalloys.copper_iron_block": "Copper-Iron Block",
+
+
+
+
+
   "itemGroup.advancedalloys.alloy": "Alloys"
 }

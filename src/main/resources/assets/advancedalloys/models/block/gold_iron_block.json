@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "advancedalloys:block/gold_iron_block"
+  }
+}
