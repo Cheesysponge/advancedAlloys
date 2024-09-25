@@ -1,6 +1,7 @@
 package name.advancedalloys;
 
 import name.advancedalloys.block.ModBlocks;
+import name.advancedalloys.block.entity.ModBlockEntities;
 import name.advancedalloys.item.ModItems;
 import name.advancedalloys.recipe.ModRecipes;
 import name.advancedalloys.screen.ModScreenHandlers;
@@ -18,5 +19,6 @@ public class AdvancedAlloys implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModScreenHandlers.registerAllScreenHandlers();
         ModRecipes.registerRecipes();
+        ModBlockEntities.registerAllBlockEntities();
     }
 }

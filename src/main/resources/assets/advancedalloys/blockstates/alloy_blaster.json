@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "advancedalloys:block/alloy_blaster" },
+    "facing=east": { "model": "advancedalloys:block/alloy_blaster", "y": 90 },
+    "facing=south": { "model": "advancedalloys:block/alloy_blaster", "y": 180 },
+    "facing=west": { "model": "advancedalloys:block/alloy_blaster", "y": 270 }
+  }
+}

@@ -1,6 +1,7 @@
 package name.advancedalloys.block;
 
 import name.advancedalloys.AdvancedAlloys;
+import name.advancedalloys.block.custom.AlloyBlasterBlock;
 import name.advancedalloys.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -26,6 +27,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
     public static final Block COPPER_GOLD_BLOCK = registerBlock("copper_gold_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
+    public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",
+            new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
