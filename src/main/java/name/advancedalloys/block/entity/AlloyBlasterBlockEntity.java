@@ -1,9 +1,11 @@
 package name.advancedalloys.block.entity;
 
+import name.advancedalloys.block.custom.AlloyBlasterBlock;
 import name.advancedalloys.recipe.AlloyBlasterRecipe;
 import name.advancedalloys.screen.AlloyBlasterScreenHandler;
 import name.advancedalloys.util.ImplementedInventory;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -106,11 +108,15 @@ public class AlloyBlasterBlockEntity extends BlockEntity implements NamedScreenH
     public static void tick(World world, BlockPos pos, BlockState state, AlloyBlasterBlockEntity entity) {
         if(isConsumingFuel(entity)) {
             entity.fuelTime--;
+
         }
+
 
         if(hasRecipe(entity)) {
             if(hasFuelInFuelSlot(entity) && !isConsumingFuel(entity)) {
                 entity.consumeFuel();
+                state = state.with(AlloyBlasterBlock.LIT, isConsumingFuel(entity));
+                world.setBlockState(pos, state, 3);
             }
             if(isConsumingFuel(entity)) {
                 entity.progress++;
@@ -176,5 +182,9 @@ public class AlloyBlasterBlockEntity extends BlockEntity implements NamedScreenH
 
     private static boolean canInsertAmountIntoOutputSlot(SimpleInventory inventory) {
         return inventory.getStack(3).getMaxCount() > inventory.getStack(3).getCount();
+    }
+
+    void setBurning(BlockState state, boolean burning) {
+        this.world.setBlockState(this.getPos(), (BlockState) state.with(AlloyBlasterBlock.LIT, burning), 3);
     }
 }

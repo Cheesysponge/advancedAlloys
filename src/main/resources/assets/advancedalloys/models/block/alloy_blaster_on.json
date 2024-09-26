@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "advancedalloys:block/alloy_blaster_top",
+    "side": "advancedalloys:block/alloy_blaster_on",
+    "top": "advancedalloys:block/alloy_blaster_bottom"
+  }
+}

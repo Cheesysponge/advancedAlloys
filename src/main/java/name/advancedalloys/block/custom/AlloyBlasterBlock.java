@@ -8,21 +8,31 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.state.property.Property;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class AlloyBlasterBlock extends BlockWithEntity implements BlockEntityProvider {
-    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-    
+    public static DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static BooleanProperty LIT = Properties.LIT;
+
+
     public AlloyBlasterBlock(Settings settings) {
         super(settings);
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(LIT, false));
     }
 
 
@@ -44,7 +54,7 @@ public class AlloyBlasterBlock extends BlockWithEntity implements BlockEntityPro
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(new Property[]{FACING, LIT});
     }
     //Block Entity v
 
@@ -87,6 +97,29 @@ public class AlloyBlasterBlock extends BlockWithEntity implements BlockEntityPro
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return checkType(type, ModBlockEntities.ALLOY_BLASTER, AlloyBlasterBlockEntity::tick);
+    }
+
+    static {
+        FACING = HorizontalFacingBlock.FACING;
+        LIT = Properties.LIT;
+    }
+
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if ((Boolean)state.get(LIT)) {
+            double h = random.nextDouble() * 0.1;
+            double d = (double)pos.getX() + h+0.5;
+            double e = (double)pos.getY();
+            double f = (double)pos.getZ() + h +0.5;
+
+            world.addParticle(ParticleTypes.SMOKE, d - 0.5, e + 0.5, f + 0.0, -0.01, 0.0, 0.0);
+            world.addParticle(ParticleTypes.FLAME, d - 0.5, e + 0.5, f + 0.0, -0.01, 0.0, 0.0);
+            world.addParticle(ParticleTypes.SMOKE, d + 0.5, e + 0.5, f + 0.0, 0.01, 0.0, 0.0);
+            world.addParticle(ParticleTypes.FLAME, d + 0.5, e + 0.5, f + 0.0, 0.01, 0.0, 0.0);
+            world.addParticle(ParticleTypes.SMOKE, d - 0.0, e + 0.5, f - 0.5, 0.0, 0.0, -0.01);
+            world.addParticle(ParticleTypes.FLAME, d - 0.0, e + 0.5, f - 0.5, 0.0, 0.0, -0.01);
+            world.addParticle(ParticleTypes.SMOKE, d + 0.0, e + 0.5, f + 0.5, 0.0, 0.0, 0.01);
+            world.addParticle(ParticleTypes.FLAME, d + 0.0, e + 0.5, f + 0.5, 0.0, 0.0, 0.01);
+        }
     }
 
 }

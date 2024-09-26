@@ -1,8 +1,12 @@
 {
   "variants": {
-    "facing=north": { "model": "advancedalloys:block/alloy_blaster" },
-    "facing=east": { "model": "advancedalloys:block/alloy_blaster", "y": 90 },
-    "facing=south": { "model": "advancedalloys:block/alloy_blaster", "y": 180 },
-    "facing=west": { "model": "advancedalloys:block/alloy_blaster", "y": 270 }
+    "facing=north,lit=false": { "model": "advancedalloys:block/alloy_blaster" },
+    "facing=east,lit=false": { "model": "advancedalloys:block/alloy_blaster", "y": 90 },
+    "facing=south,lit=false": { "model": "advancedalloys:block/alloy_blaster", "y": 180 },
+    "facing=west,lit=false": { "model": "advancedalloys:block/alloy_blaster", "y": 270 },
+    "facing=north,lit=true": { "model": "advancedalloys:block/alloy_blaster_on" },
+    "facing=east,lit=true": { "model": "advancedalloys:block/alloy_blaster_on", "y": 90 },
+    "facing=south,lit=true": { "model": "advancedalloys:block/alloy_blaster_on", "y": 180 },
+    "facing=west,lit=true": { "model": "advancedalloys:block/alloy_blaster_on", "y": 270 }
   }
 }
