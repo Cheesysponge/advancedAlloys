@@ -1,5 +1,6 @@
 package name.advancedalloys.block.entity;
 
+import com.mojang.datafixers.TypeRewriteRule;
 import name.advancedalloys.block.custom.AlloyBlasterBlock;
 import name.advancedalloys.recipe.AlloyBlasterRecipe;
 import name.advancedalloys.screen.AlloyBlasterScreenHandler;
@@ -115,14 +116,17 @@ public class AlloyBlasterBlockEntity extends BlockEntity implements NamedScreenH
         if(hasRecipe(entity)) {
             if(hasFuelInFuelSlot(entity) && !isConsumingFuel(entity)) {
                 entity.consumeFuel();
-                state = state.with(AlloyBlasterBlock.LIT, isConsumingFuel(entity));
+                state = state.with(AlloyBlasterBlock.LIT, true);
                 world.setBlockState(pos, state, 3);
             }
-            if(isConsumingFuel(entity)) {
+            else if(isConsumingFuel(entity)) {
                 entity.progress++;
                 if(entity.progress > entity.maxProgress) {
                     craftItem(entity);
                 }
+            }
+            else{
+                world.setBlockState(pos, state, 3);
             }
         } else {
             entity.resetProgress();
