@@ -7,7 +7,9 @@ import name.advancedalloys.util.ImplementedInventory;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.AbstractFurnaceBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -17,6 +19,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
@@ -106,17 +109,17 @@ public class AlloyBlasterBlockEntity extends BlockEntity implements NamedScreenH
     }
 
     public static void tick(World world, BlockPos pos, BlockState state, AlloyBlasterBlockEntity entity) {
+        boolean bl = isConsumingFuel(entity);
+
         if(isConsumingFuel(entity)) {
             entity.fuelTime--;
-
         }
+
 
 
         if(hasRecipe(entity)) {
             if(hasFuelInFuelSlot(entity) && !isConsumingFuel(entity)) {
                 entity.consumeFuel();
-                state = state.with(AlloyBlasterBlock.LIT, isConsumingFuel(entity));
-                world.setBlockState(pos, state, 3);
             }
             if(isConsumingFuel(entity)) {
                 entity.progress++;
@@ -126,6 +129,9 @@ public class AlloyBlasterBlockEntity extends BlockEntity implements NamedScreenH
             }
         } else {
             entity.resetProgress();
+        }
+        if(bl != isConsumingFuel(entity)){
+            entity.world.setBlockState(entity.getPos(), (BlockState)state.with(AlloyBlasterBlock.LIT, isConsumingFuel(entity)), 3);
         }
     }
 
@@ -184,7 +190,7 @@ public class AlloyBlasterBlockEntity extends BlockEntity implements NamedScreenH
         return inventory.getStack(3).getMaxCount() > inventory.getStack(3).getCount();
     }
 
-    void setBurning(BlockState state, boolean burning) {
-        this.world.setBlockState(this.getPos(), (BlockState) state.with(AlloyBlasterBlock.LIT, burning), 3);
-    }
+
+
+
 }

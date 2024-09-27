@@ -122,4 +122,9 @@ public class AlloyBlasterBlock extends BlockWithEntity implements BlockEntityPro
         }
     }
 
+    static {
+        FACING = HorizontalFacingBlock.FACING;
+        LIT = Properties.LIT;
+    }
+
 }
