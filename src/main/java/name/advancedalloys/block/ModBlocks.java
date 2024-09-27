@@ -22,13 +22,13 @@ import java.util.List;
 
 public class ModBlocks {
     public static final Block COPPER_IRON_BLOCK = registerBlock("copper_iron_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
     public static final Block GOLD_IRON_BLOCK = registerBlock("gold_iron_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
     public static final Block COPPER_GOLD_BLOCK = registerBlock("copper_gold_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
     public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",
-            new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.ALLOYS);
+            new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {

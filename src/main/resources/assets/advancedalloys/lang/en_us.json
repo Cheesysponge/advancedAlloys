@@ -3,6 +3,17 @@
   "item.advancedalloys.copper_gold_ingot": "Copper-Gold Ingot",
   "item.advancedalloys.gold_iron_ingot": "Gold-Iron Ingot",
 
+  "item.advancedalloys.copper_helmet": "Copper Helmet",
+  "item.advancedalloys.copper_chestplate": "Copper Chestplate",
+  "item.advancedalloys.copper_leggings": "Copper Leggings",
+  "item.advancedalloys.copper_boots": "Copper Boots",
+
+  "item.advancedalloys.copper_iron_helmet": "Copper-Iron Helmet",
+  "item.advancedalloys.copper_iron_chestplate": "Copper-Iron Chestplate",
+  "item.advancedalloys.copper_iron_leggings": "Copper-Iron Leggings",
+  "item.advancedalloys.copper_iron_boots": "Copper-Iron Boots",
+
+
 
   "block.advancedalloys.gold_iron_block": "Gold-Iron Block",
   "block.advancedalloys.copper_gold_block": "Copper-Gold Block",

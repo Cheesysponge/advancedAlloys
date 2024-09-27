@@ -13,7 +13,10 @@ import net.minecraft.item.ArmorMaterial;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    COPPER("copper", 14, new int[]{2, 4, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT));
+    COPPER("copper", 20, new int[]{2, 4, 6, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    COPPER_IRON("copper_iron", 20, new int[]{2, 5, 6, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_IRON_INGOT)),
+    COPPER_GOLD("copper_gold", 20, new int[]{2, 4, 6, 2}, 45, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT));
+
 
     private static final int[] BASE_DURABILITY;
     private final String name;
