@@ -3,6 +3,32 @@
   "item.advancedalloys.copper_gold_ingot": "Copper-Gold Ingot",
   "item.advancedalloys.gold_iron_ingot": "Gold-Iron Ingot",
 
+  "item.advancedalloys.copper_axe": "Copper Axe",
+  "item.advancedalloys.copper_pickaxe": "Copper Pickaxe",
+  "item.advancedalloys.copper_hoe": "Copper Hoe",
+  "item.advancedalloys.copper_shovel": "Copper Shovel",
+  "item.advancedalloys.copper_sword": "Copper Sword",
+
+  "item.advancedalloys.copper_iron_axe": "Copper-Iron Axe",
+  "item.advancedalloys.copper_iron_pickaxe": "Copper-Iron Pickaxe",
+  "item.advancedalloys.copper_iron_hoe": "Copper-Iron Hoe",
+  "item.advancedalloys.copper_iron_shovel": "Copper-Iron Shovel",
+  "item.advancedalloys.copper_iron_sword": "Copper-Iron Sword",
+
+  "item.advancedalloys.copper_gold_axe": "Copper-Gold Axe",
+  "item.advancedalloys.copper_gold_pickaxe": "Copper-Gold Pickaxe",
+  "item.advancedalloys.copper_gold_hoe": "Copper-Gold Hoe",
+  "item.advancedalloys.copper_gold_shovel": "Copper-Gold Shovel",
+  "item.advancedalloys.copper_gold_sword": "Copper-Gold Sword",
+
+  "item.advancedalloys.gold_iron_axe": "Gold-Iron Axe",
+  "item.advancedalloys.gold_iron_pickaxe": "Gold-Iron Pickaxe",
+  "item.advancedalloys.gold_iron_hoe": "Gold-Iron Hoe",
+  "item.advancedalloys.gold_iron_shovel": "Gold-Iron Shovel",
+  "item.advancedalloys.gold_iron_sword": "Gold-Iron Sword",
+
+
+
   "item.advancedalloys.copper_helmet": "Copper Helmet",
   "item.advancedalloys.copper_chestplate": "Copper Chestplate",
   "item.advancedalloys.copper_leggings": "Copper Leggings",
@@ -13,7 +39,15 @@
   "item.advancedalloys.copper_iron_leggings": "Copper-Iron Leggings",
   "item.advancedalloys.copper_iron_boots": "Copper-Iron Boots",
 
+  "item.advancedalloys.copper_gold_helmet": "Copper-Gold Helmet",
+  "item.advancedalloys.copper_gold_chestplate": "Copper-Gold Chestplate",
+  "item.advancedalloys.copper_gold_leggings": "Copper-Gold Leggings",
+  "item.advancedalloys.copper_gold_boots": "Copper-Gold Boots",
 
+  "item.advancedalloys.gold_iron_helmet": "Gold-Iron Helmet",
+  "item.advancedalloys.gold_iron_chestplate": "Gold-Iron Chestplate",
+  "item.advancedalloys.gold_iron_leggings": "Gold-Iron Leggings",
+  "item.advancedalloys.gold_iron_boots": "Gold-Iron Boots",
 
   "block.advancedalloys.gold_iron_block": "Gold-Iron Block",
   "block.advancedalloys.copper_gold_block": "Copper-Gold Block",
@@ -24,5 +58,8 @@
 
 
 
-  "itemGroup.advancedalloys.alloy": "Alloys"
+  "itemGroup.advancedalloys.alloy": "Alloys",
+  "itemGroup.advancedalloys.blocks": "Blocks",
+  "itemGroup.advancedalloys.armor": "Armor",
+  "itemGroup.advancedalloys.tools": "Tools"
 }

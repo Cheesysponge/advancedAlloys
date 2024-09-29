@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "advancedalloys:item/copper_iron_pickaxe"
+  }
+}
