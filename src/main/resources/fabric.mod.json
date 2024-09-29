@@ -17,7 +17,8 @@
     ],
     "main": [
       "name.advancedalloys.AdvancedAlloys"
-    ]
+    ],
+    "rei_client": ["name.advancedalloys.compat.ModREIClientPlugin"]
   },
   "mixins": [
     "advancedalloys.mixins.json"
