@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "DD",
-    "#D",
+    "# ",
     "# "
   ],
   "key": {
@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "D": {
-      "item": "minecraft:copper_ingot"
+      "item": "advancedalloys:copper_gold_ingot"
     }
   },
   "result": {
-    "item": "advancedalloys:copper_axe"
+    "item": "advancedalloys:copper_gold_hoe"
   }
 }
