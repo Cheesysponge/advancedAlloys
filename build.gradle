@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
+    id 'fabric-loom' version '1.1-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -9,6 +9,8 @@ group = project.maven_group
 repositories {
     mavenLocal()
     mavenCentral()
+
+    // Shedaniel's Maven for REI
     maven {
         url "https://maven.shedaniel.me/"
         content {
@@ -17,6 +19,8 @@ repositories {
             includeGroup "dev.architectury"
         }
     }
+
+    // ModMaven for JEI
     maven {
         name 'modmaven'
         url "https://modmaven.dev/"
@@ -24,53 +28,39 @@ repositories {
             includeGroup "mezz.jei"
         }
     }
-    // Add repositories to retrieve artifacts from in here.
-    // You should only use this when depending on other mods because
-    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-    // for more information about repositories.
+
+    // You can add additional repositories if needed for other dependencies.
 }
 
 dependencies {
-    // To change the versions see the gradle.properties file
+    // Minecraft and Fabric Loader
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
-    modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}") {
-        exclude group: "net.fabricmc.fabric-api"
-        exclude group: "org.yaml" // snakeyaml
-        exclude group: "blue.endless" // jankson
-    }
-    modCompileOnly("me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${project.rei_version}") {
-        exclude group: "net.fabricmc.fabric-api"
-        exclude group: "org.yaml" // snakeyaml
-        exclude group: "blue.endless" // jankson
-    }
+    // Fabric API
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+    // REI (Roughly Enough Items) API and default plugin if using REI
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${project.rei_version}"
+    modCompileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-fabric:${project.rei_version}"
+
+    // Conditional dependencies for JEI or REI
     if (project.runtime_itemlist_mod == "jei") {
-        modLocalRuntime modCompileOnly("mezz.jei:jei-${jei_minecraft_version}-fabric:${jei_version}") {
-            exclude group: "mezz.jei"
-        }
+        modImplementation "mezz.jei:jei-${project.jei_minecraft_version}-fabric:${project.jei_version}"
     } else if (project.runtime_itemlist_mod == "rei") {
-        modCompileOnly("mezz.jei:jei-${jei_minecraft_version}-fabric:${jei_version}") {
-            exclude group: "mezz.jei"
-        }
+        modImplementation "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
-        // Manually override architectury TODO remove once REI's dependency is fixed
-        modLocalRuntime "dev.architectury:architectury-fabric:6.2.43"
-        modLocalRuntime modCompileOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}") {
-            exclude group: "net.fabricmc.fabric-api"
-        }
+        // Optional: Overriding architectury dependency due to REI
+        modImplementation "dev.architectury:architectury-fabric:6.2.43"
     } else {
         throw new GradleException("Invalid runtime_itemlist_mod value: " + project.runtime_itemlist_mod)
     }
 
-
-
-    // Fabric API. This is technically optional, but you probably want it anyway.
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    }
+    // Optional: If you're using snakeyaml or other additional libraries, add them here.
+    implementation "org.yaml:snakeyaml:${project.snakeyaml_version}"
+    implementation "io.methvin:directory-watcher:${project.directory_watcher_version}"
+}
 
 processResources {
     inputs.property "version", project.version
@@ -87,47 +77,35 @@ processResources {
 
 def targetJavaVersion = 17
 tasks.withType(JavaCompile).configureEach {
-    // ensure that the encoding is set to UTF-8, no matter what the system default is
-    // this fixes some edge cases with special characters not displaying correctly
-    // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-    // If Javadoc is generated, this must be specified in that task too.
-    it.options.encoding = "UTF-8"
-    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
-        it.options.release.set(targetJavaVersion)
-    }
+    options.encoding = "UTF-8"
+    options.release.set(targetJavaVersion)
 }
 
 java {
-    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
-    if (JavaVersion.current() < javaVersion) {
-        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    }
-    archivesBaseName = project.archives_base_name
-    // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-    // if it is present.
-    // If you remove this line, sources will not be generated.
-    withSourcesJar()
-}
-
-jar {
-    from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}"}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 
-// configure the maven publication
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.deprecation = false
+    options.compilerArgs << "-Xmaxerrs" << "9999"
+}
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
+            groupId = project.maven_group
+            artifactId = project.archives_base_name
+            version = project.mod_version
+
             from components.java
         }
     }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
+        maven {
+            url = uri("file://${project.buildDir}/maven-repo")
+        }
     }
 }

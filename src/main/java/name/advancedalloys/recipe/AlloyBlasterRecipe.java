@@ -15,7 +15,7 @@ import net.minecraft.util.JsonHelper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
 
-public class AlloyBlasterRecipe implements Recipe<SimpleInventory>, Inventory {
+public class AlloyBlasterRecipe implements Recipe<SimpleInventory> {
     private final Identifier id;
     private final ItemStack output;
     private final DefaultedList<Ingredient> recipeItems;
@@ -67,65 +67,10 @@ public class AlloyBlasterRecipe implements Recipe<SimpleInventory>, Inventory {
         return Type.INSTANCE;
     }
 
-    @Override
-    public boolean isEmpty() {
-        return Recipe.super.isEmpty();
-    }
 
-    @Override
-    public int size() {
-        return 0;
-    }
 
-    @Override
-    public ItemStack getStack(int slot) {
-        return null;
-    }
 
-    @Override
-    public ItemStack removeStack(int slot, int amount) {
-        return null;
-    }
 
-    @Override
-    public ItemStack removeStack(int slot) {
-        return null;
-    }
-
-    @Override
-    public void setStack(int slot, ItemStack stack) {
-
-    }
-
-    @Override
-    public int getMaxCountPerStack() {
-        return Inventory.super.getMaxCountPerStack();
-    }
-
-    @Override
-    public void markDirty() {
-
-    }
-
-    @Override
-    public boolean canPlayerUse(PlayerEntity player) {
-        return false;
-    }
-
-    @Override
-    public void onOpen(PlayerEntity player) {
-        Inventory.super.onOpen(player);
-    }
-
-    @Override
-    public void onClose(PlayerEntity player) {
-        Inventory.super.onClose(player);
-    }
-
-    @Override
-    public void clear() {
-
-    }
 
     public Ingredient getTopInput() {
         return recipeItems.get(0);
