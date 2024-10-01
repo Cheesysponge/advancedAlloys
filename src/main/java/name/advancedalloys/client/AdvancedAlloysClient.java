@@ -3,7 +3,6 @@ package name.advancedalloys.client;
 import name.advancedalloys.screen.AlloyBlasterScreen;
 import name.advancedalloys.screen.ModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 
 public class AdvancedAlloysClient implements ClientModInitializer {
