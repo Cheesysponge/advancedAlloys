@@ -27,6 +27,11 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
     public static final Block COPPER_GOLD_BLOCK = registerBlock("copper_gold_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
+
+    public static final Block IRON_NETHERITE_BLOCK = registerBlock("iron_netherite_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(15f)), ModItemGroup.BLOCKS);
+    public static final Block COPPER_NETHERITE_BLOCK = registerBlock("copper_netherite_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(15f)), ModItemGroup.BLOCKS);
     public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",
             new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
 

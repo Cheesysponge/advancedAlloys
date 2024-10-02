@@ -18,8 +18,8 @@ public enum  ModArmorMaterials implements ArmorMaterial {
     COPPER_IRON("copper_iron", 20, new int[]{2, 5, 6, 2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.5f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_IRON_INGOT)),
     COPPER_GOLD("copper_gold", 20, new int[]{2, 4, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT)),
     GOLD_IRON("gold_iron", 15, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
-    COPPER_NETHERITE("copper_netherite", 40, new int[]{2, 5, 6, 2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0.1f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
-    IRON_NETHERITE("iron_netherite", 37, new int[]{2, 5, 6, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0.1f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT));
+    COPPER_NETHERITE("copper_netherite", 40, new int[]{2, 5, 6, 2}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
+    IRON_NETHERITE("iron_netherite", 37, new int[]{2, 5, 6, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.IRON_NETHERITE_INGOT));
 
 
 //    LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {

@@ -10,9 +10,15 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+    // Ingots
     public static final Item COPPER_IRON_INGOT = registerItem("copper_iron_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
     public static final Item GOLD_IRON_INGOT = registerItem("gold_iron_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
     public static final Item COPPER_GOLD_INGOT = registerItem("copper_gold_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
+    public static final Item COPPER_NETHERITE_INGOT = registerItem("copper_netherite_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
+    public static final Item IRON_NETHERITE_INGOT = registerItem("iron_netherite_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
+
+
+    // Tools
 
     public static final Item COPPER_SWORD = registerItem("copper_sword", new SwordItem(ModToolMaterials.COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroup.TOOLS).maxCount(1)));
     public static final Item COPPER_PICKAXE = registerItem("copper_pickaxe", new PickaxeItem(ModToolMaterials.COPPER,1,-2.8f,new FabricItemSettings().rarity(Rarity.COMMON).group(ModItemGroup.TOOLS).maxCount(1)));
@@ -38,7 +44,20 @@ public class ModItems {
     public static final Item GOLD_IRON_SHOVEL = registerItem("gold_iron_shovel", new ShovelItem(ModToolMaterials.GOLD_IRON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
     public static final Item GOLD_IRON_HOE = registerItem("gold_iron_hoe", new ModHoeItem(ModToolMaterials.GOLD_IRON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
 
+    public static final Item COPPER_NETHERITE_SWORD = registerItem("copper_netherite_sword", new SwordItem(ModToolMaterials.COPPER_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item COPPER_NETHERITE_PICKAXE = registerItem("copper_netherite_pickaxe", new PickaxeItem(ModToolMaterials.COPPER_NETHERITE,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item COPPER_NETHERITE_AXE = registerItem("copper_netherite_axe", new AxeItem(ModToolMaterials.COPPER_NETHERITE,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item COPPER_NETHERITE_SHOVEL = registerItem("copper_netherite_shovel", new ShovelItem(ModToolMaterials.COPPER_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item COPPER_NETHERITE_HOE = registerItem("copper_netherite_hoe", new ModHoeItem(ModToolMaterials.COPPER_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
 
+    public static final Item IRON_NETHERITE_SWORD = registerItem("iron_netherite_sword", new SwordItem(ModToolMaterials.IRON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item IRON_NETHERITE_PICKAXE = registerItem("iron_netherite_pickaxe", new PickaxeItem(ModToolMaterials.IRON_NETHERITE,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item IRON_NETHERITE_AXE = registerItem("iron_netherite_axe", new AxeItem(ModToolMaterials.IRON_NETHERITE,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item IRON_NETHERITE_SHOVEL = registerItem("iron_netherite_shovel", new ShovelItem(ModToolMaterials.IRON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item IRON_NETHERITE_HOE = registerItem("iron_netherite_hoe", new ModHoeItem(ModToolMaterials.IRON_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+
+
+    // Armors
     public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.HEAD,new FabricItemSettings().group(ModItemGroup.ARMOR).maxCount(1)));
     public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.CHEST,new FabricItemSettings().group(ModItemGroup.ARMOR).maxCount(1)));
     public static final Item COPPER_LEGGINGS = registerItem("copper_leggings", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.LEGS,new FabricItemSettings().group(ModItemGroup.ARMOR).maxCount(1)));
