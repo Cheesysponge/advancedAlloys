@@ -22,18 +22,18 @@ import java.util.List;
 
 public class ModBlocks {
     public static final Block COPPER_IRON_BLOCK = registerBlock("copper_iron_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8f)), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(1f)), ModItemGroup.BLOCKS);
     public static final Block GOLD_IRON_BLOCK = registerBlock("gold_iron_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(1f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block COPPER_GOLD_BLOCK = registerBlock("copper_gold_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(8f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(1f).requiresTool()), ModItemGroup.BLOCKS);
 
     public static final Block IRON_NETHERITE_BLOCK = registerBlock("iron_netherite_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(15f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(1f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block COPPER_NETHERITE_BLOCK = registerBlock("copper_netherite_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(15f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(1f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",
-            new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(8f).requiresTool()), ModItemGroup.BLOCKS);
+            new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(1f).requiresTool()), ModItemGroup.BLOCKS);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
