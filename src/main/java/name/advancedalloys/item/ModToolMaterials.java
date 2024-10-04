@@ -14,7 +14,9 @@ public enum ModToolMaterials implements ToolMaterial {
     COPPER_GOLD(MiningLevels.IRON, 275, 12.0f, 1.5f, 22, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT)),
     GOLD_IRON(MiningLevels.IRON, 250, 13.0f, 2.0f, 22, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
     IRON_NETHERITE(MiningLevels.NETHERITE, 1969, 8.5f, 4.5f, 15, () -> Ingredient.ofItems(ModItems.IRON_NETHERITE_INGOT)),
-    COPPER_NETHERITE(MiningLevels.NETHERITE, 2171, 8.0f, 3.5f, 18, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT));
+    COPPER_NETHERITE(MiningLevels.NETHERITE, 2171, 8.0f, 3.5f, 18, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
+    OXIDIZED_COPPER(MiningLevels.NETHERITE, 500, 15.0f, 5.5f, 100, () -> Ingredient.ofItems(ModItems.OXIDIZED_COPPER_INGOT));
+
 //    WOOD(0, 59, 2.0F, 0.0F, 15, () -> {
 //        return Ingredient.fromTag(ItemTags.PLANKS);
 //    }),

@@ -16,6 +16,8 @@ public class ModItems {
     public static final Item COPPER_GOLD_INGOT = registerItem("copper_gold_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
     public static final Item COPPER_NETHERITE_INGOT = registerItem("copper_netherite_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
     public static final Item IRON_NETHERITE_INGOT = registerItem("iron_netherite_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
+    public static final Item OXIDIZED_COPPER_INGOT = registerItem("oxidized_copper_ingot", new Item(new FabricItemSettings().group(ModItemGroup.ALLOYS)));
+
 
 
     // Tools
@@ -56,6 +58,12 @@ public class ModItems {
     public static final Item IRON_NETHERITE_SHOVEL = registerItem("iron_netherite_shovel", new ShovelItem(ModToolMaterials.IRON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
     public static final Item IRON_NETHERITE_HOE = registerItem("iron_netherite_hoe", new ModHoeItem(ModToolMaterials.IRON_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
 
+    public static final Item OXIDIZED_COPPER_SWORD = registerItem("oxidized_copper_sword", new SwordItem(ModToolMaterials.OXIDIZED_COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_PICKAXE = registerItem("oxidized_copper_pickaxe", new PickaxeItem(ModToolMaterials.OXIDIZED_COPPER,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_AXE = registerItem("oxidized_copper_axe", new AxeItem(ModToolMaterials.OXIDIZED_COPPER,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_SHOVEL = registerItem("oxidized_copper_shovel", new ShovelItem(ModToolMaterials.OXIDIZED_COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_HOE = registerItem("oxidized_copper_hoe", new ModHoeItem(ModToolMaterials.OXIDIZED_COPPER,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.TOOLS).maxCount(1)));
+
 
     // Armors
     public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.HEAD,new FabricItemSettings().group(ModItemGroup.ARMOR).maxCount(1)));
@@ -87,6 +95,11 @@ public class ModItems {
     public static final Item COPPER_NETHERITE_CHESTPLATE = registerItem("copper_netherite_chestplate", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
     public static final Item COPPER_NETHERITE_LEGGINGS = registerItem("copper_netherite_leggings", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
     public static final Item COPPER_NETHERITE_BOOTS = registerItem("copper_netherite_boots", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
+
+    public static final Item OXIDIZED_COPPER_HELMET = registerItem("oxidized_copper_helmet", new ArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_CHESTPLATE = registerItem("oxidized_copper_chestplate", new ArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_LEGGINGS = registerItem("oxidized_copper_leggings", new ArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
+    public static final Item OXIDIZED_COPPER_BOOTS = registerItem("oxidized_copper_boots", new ArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).group(ModItemGroup.ARMOR).maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name), item);

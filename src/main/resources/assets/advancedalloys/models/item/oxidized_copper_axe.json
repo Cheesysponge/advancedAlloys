@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "advancedalloys:item/oxidized_copper_axe"
+  }
+}
