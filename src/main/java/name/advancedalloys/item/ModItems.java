@@ -104,12 +104,13 @@ public class ModItems {
     public static final Item OXIDIZED_COPPER_BOOTS = registerItem("oxidized_copper_boots", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
     private static Item registerItem(String name, Item item, ItemGroup group) {
-        addToItemGroup(group,item);
+//        addToItemGroup(group,item);
         return Registry.register(Registries.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name), item);
     }
-    public static void addToItemGroup(ItemGroup group, Item item) {
-        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
-    }
+//    public static void addToItemGroup(ItemGroup group, Item item) {
+//
+//        ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
+//    }
 
     public static void registerModItems() {
         AdvancedAlloys.LOGGER.info("Registering Mod Items for " + AdvancedAlloys.MOD_ID);

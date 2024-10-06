@@ -8,6 +8,7 @@ import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class OxidizedCopperHoeItem extends HoeItem {
@@ -18,7 +19,7 @@ public class OxidizedCopperHoeItem extends HoeItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         int x = (int)(Math.random() * 10);
         if(x<2) {
-            World world = target.world;
+            World world = target.getWorld();
             LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
             lightning.setPos(attacker.getX(), attacker.getY(), attacker.getZ());
             LightningEntity lightning1 = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
@@ -32,7 +33,6 @@ public class OxidizedCopperHoeItem extends HoeItem {
 
     @Override
     public boolean postMine(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity miner) {
-
         int x = (int)(Math.random() * 10);
         if(x<2) {
             LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, world);

@@ -23,7 +23,7 @@ public class OxidizedCopperShovelItem extends ShovelItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         int x = (int)(Math.random() * 10);
         if(x<2) {
-            World world = target.world;
+            World world = target.getWorld();
             LightningEntity lightning = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
             lightning.setPos(attacker.getX(), attacker.getY(), attacker.getZ());
             LightningEntity lightning1 = new LightningEntity(EntityType.LIGHTNING_BOLT, world);

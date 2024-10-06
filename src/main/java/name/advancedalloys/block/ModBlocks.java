@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,6 +15,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
@@ -24,18 +25,18 @@ import java.util.List;
 
 public class ModBlocks {
     public static final Block COPPER_IRON_BLOCK = registerBlock("copper_iron_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block GOLD_IRON_BLOCK = registerBlock("gold_iron_block",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block COPPER_GOLD_BLOCK = registerBlock("copper_gold_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
 
     public static final Block IRON_NETHERITE_BLOCK = registerBlock("iron_netherite_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block COPPER_NETHERITE_BLOCK = registerBlock("copper_netherite_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",
-            new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.BLOCKS);
+            new AlloyBlasterBlock(FabricBlockSettings.copyOf(Blocks.BLAST_FURNACE).strength(4f).requiresTool()), ModItemGroup.BLOCKS);
 
 
 
@@ -61,7 +62,7 @@ public class ModBlocks {
     private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
         Item item = Registry.register(Registries.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));
-        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
+//        ItemGroupEvents.modifyEntriesEvent(Registry).register(entries -> entries.add(item));
         return item;
     }
     public static void registerModBlocks() {
