@@ -52,7 +52,7 @@ dependencies {
         modImplementation "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
         // Optional: Overriding architectury dependency due to REI
-        modImplementation "dev.architectury:architectury-fabric:7.1.86"
+        modImplementation "dev.architectury:architectury-fabric:${project.architectury_version}"
     } else {
         throw new GradleException("Invalid runtime_itemlist_mod value: " + project.runtime_itemlist_mod)
     }

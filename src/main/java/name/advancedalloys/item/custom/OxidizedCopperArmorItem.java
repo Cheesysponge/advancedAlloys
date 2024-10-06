@@ -17,8 +17,8 @@ import net.minecraft.world.explosion.Explosion;
 import java.util.Objects;
 
 public class OxidizedCopperArmorItem extends ArmorItem {
-    public OxidizedCopperArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
-        super(material, slot, settings);
+    public OxidizedCopperArmorItem(ArmorMaterial material, Type type, Settings settings) {
+        super(material, type, settings);
     }
 
     @Override

@@ -1,26 +1,64 @@
 package name.advancedalloys.item;
 
-import net.minecraft.entity.EquipmentSlot;
+import java.util.EnumMap;
+import java.util.function.Supplier;
+
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ArmorMaterials;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
-import net.minecraft.item.ArmorMaterial;
+import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.Util;
 
 
-import java.util.function.Supplier;
-
-public enum  ModArmorMaterials implements ArmorMaterial {
-    COPPER("copper", 20, new int[]{2, 4, 5, 2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
-    COPPER_IRON("copper_iron", 20, new int[]{2, 5, 6, 2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.5f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_IRON_INGOT)),
-    COPPER_GOLD("copper_gold", 20, new int[]{2, 4, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT)),
-    GOLD_IRON("gold_iron", 15, new int[]{2, 5, 6, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
-    COPPER_NETHERITE("copper_netherite", 40, new int[]{3, 6, 8, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
-    IRON_NETHERITE("iron_netherite", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.IRON_NETHERITE_INGOT)),
-    OXIDIZED_COPPER("oxidized_copper", 20, new int[]{3, 6, 7, 3}, 100, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 1f, () -> Ingredient.ofItems(ModItems.OXIDIZED_COPPER_INGOT)),
+public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
+    COPPER("copper", 20, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 2);
+        map.put(Type.LEGGINGS, 4);
+        map.put(Type.CHESTPLATE, 5);
+        map.put(Type.HELMET, 2);
+    }), 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    COPPER_IRON("copper_iron", 20, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 2);
+        map.put(Type.LEGGINGS, 5);
+        map.put(Type.CHESTPLATE, 6);
+        map.put(Type.HELMET, 2);
+    }), 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.5f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_IRON_INGOT)),
+    COPPER_GOLD("copper_gold", 20, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 2);
+        map.put(Type.LEGGINGS, 4);
+        map.put(Type.CHESTPLATE, 6);
+        map.put(Type.HELMET, 2);
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT)),
+    GOLD_IRON("gold_iron", 15, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 2);
+        map.put(Type.LEGGINGS, 5);
+        map.put(Type.CHESTPLATE, 6);
+        map.put(Type.HELMET, 2);
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
+    COPPER_NETHERITE("copper_netherite", 40, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 8);
+        map.put(Type.HELMET, 3);
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
+    IRON_NETHERITE("iron_netherite", 37, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 8);
+        map.put(Type.HELMET, 3);
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.IRON_NETHERITE_INGOT)),
+    OXIDIZED_COPPER("oxidized_copper", 20, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 7);
+        map.put(Type.HELMET, 3);
+    }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 1f, () -> Ingredient.ofItems(ModItems.OXIDIZED_COPPER_INGOT)),
     ;
 
 
@@ -46,19 +84,24 @@ public enum  ModArmorMaterials implements ArmorMaterial {
 //        return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT});
 //    });
 
+    public static final StringIdentifiable.Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
+    private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY = Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 13);
+        map.put(Type.LEGGINGS, 15);
+        map.put(Type.CHESTPLATE, 16);
+        map.put(Type.HELMET, 11);
+    });
 
-
-    private static final int[] BASE_DURABILITY;
     private final String name;
     private final int durabilityMultiplier;
-    private final int[] protectionAmounts;
+    private final EnumMap<ArmorItem.Type, Integer> protectionAmounts;
     private final int enchantability;
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    private ModArmorMaterials(String name, int durabilityMultiplier, EnumMap<Type, Integer> protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -70,47 +113,49 @@ public enum  ModArmorMaterials implements ArmorMaterial {
     }
 
 
-    @Override
-    public int getDurability(EquipmentSlot slot) {
-        return BASE_DURABILITY[slot.getEntitySlotId()] * this.durabilityMultiplier;
+//    @Override
+//    public int getDurability(EquipmentSlot slot) {
+//        return BASE_DURABILITY[slot.getEntitySlotId()] * this.durabilityMultiplier;
+//    }
+//
+//    @Override
+//    public int getProtectionAmount(EquipmentSlot slot) {
+//        return this.protectionAmounts[slot.getEntitySlotId()];
+//    }
+
+    public int getDurability(ArmorItem.Type type) {
+        return (Integer)BASE_DURABILITY.get(type) * this.durabilityMultiplier;
     }
 
-    @Override
-    public int getProtectionAmount(EquipmentSlot slot) {
-        return this.protectionAmounts[slot.getEntitySlotId()];
+    public int getProtection(ArmorItem.Type type) {
+        return (Integer)this.protectionAmounts.get(type);
     }
 
-    @Override
     public int getEnchantability() {
         return this.enchantability;
     }
 
-    @Override
     public SoundEvent getEquipSound() {
         return this.equipSound;
     }
 
-    @Override
     public Ingredient getRepairIngredient() {
-        return this.repairIngredientSupplier.get();
+        return (Ingredient)this.repairIngredientSupplier.get();
     }
 
-    @Override
     public String getName() {
         return this.name;
     }
 
-    @Override
     public float getToughness() {
         return this.toughness;
     }
 
-    @Override
     public float getKnockbackResistance() {
         return this.knockbackResistance;
     }
 
-    static {
-        BASE_DURABILITY = new int[]{13, 15, 16, 11};
+    public String asString() {
+        return this.name;
     }
 }

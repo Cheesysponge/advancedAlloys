@@ -68,40 +68,40 @@ public class ModItems {
 
 
     // Armors
-    public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.HEAD,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.CHEST,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_LEGGINGS = registerItem("copper_leggings", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.LEGS,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_BOOTS = registerItem("copper_boots", new ArmorItem(ModArmorMaterials.COPPER, EquipmentSlot.FEET,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.HELMET,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_CHESTPLATE = registerItem("copper_chestplate", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_LEGGINGS = registerItem("copper_leggings", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.LEGGINGS,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_BOOTS = registerItem("copper_boots", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.BOOTS,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item COPPER_IRON_HELMET = registerItem("copper_iron_helmet", new ArmorItem(ModArmorMaterials.COPPER_IRON, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_IRON_CHESTPLATE = registerItem("copper_iron_chestplate", new ArmorItem(ModArmorMaterials.COPPER_IRON, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_IRON_LEGGINGS = registerItem("copper_iron_leggings", new ArmorItem(ModArmorMaterials.COPPER_IRON, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_IRON_BOOTS = registerItem("copper_iron_boots", new ArmorItem(ModArmorMaterials.COPPER_IRON, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_IRON_HELMET = registerItem("copper_iron_helmet", new ArmorItem(ModArmorMaterials.COPPER_IRON, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_IRON_CHESTPLATE = registerItem("copper_iron_chestplate", new ArmorItem(ModArmorMaterials.COPPER_IRON, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_IRON_LEGGINGS = registerItem("copper_iron_leggings", new ArmorItem(ModArmorMaterials.COPPER_IRON, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_IRON_BOOTS = registerItem("copper_iron_boots", new ArmorItem(ModArmorMaterials.COPPER_IRON, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item COPPER_GOLD_HELMET = registerItem("copper_gold_helmet", new ArmorItem(ModArmorMaterials.COPPER_GOLD, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_GOLD_CHESTPLATE = registerItem("copper_gold_chestplate", new ArmorItem(ModArmorMaterials.COPPER_GOLD, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_GOLD_LEGGINGS = registerItem("copper_gold_leggings", new ArmorItem(ModArmorMaterials.COPPER_GOLD, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_GOLD_BOOTS = registerItem("copper_gold_boots", new ArmorItem(ModArmorMaterials.COPPER_GOLD, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_GOLD_HELMET = registerItem("copper_gold_helmet", new ArmorItem(ModArmorMaterials.COPPER_GOLD, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_GOLD_CHESTPLATE = registerItem("copper_gold_chestplate", new ArmorItem(ModArmorMaterials.COPPER_GOLD, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_GOLD_LEGGINGS = registerItem("copper_gold_leggings", new ArmorItem(ModArmorMaterials.COPPER_GOLD, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_GOLD_BOOTS = registerItem("copper_gold_boots", new ArmorItem(ModArmorMaterials.COPPER_GOLD, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item GOLD_IRON_HELMET = registerItem("gold_iron_helmet", new ArmorItem(ModArmorMaterials.GOLD_IRON, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item GOLD_IRON_CHESTPLATE = registerItem("gold_iron_chestplate", new ArmorItem(ModArmorMaterials.GOLD_IRON, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item GOLD_IRON_LEGGINGS = registerItem("gold_iron_leggings", new ArmorItem(ModArmorMaterials.GOLD_IRON, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item GOLD_IRON_BOOTS = registerItem("gold_iron_boots", new ArmorItem(ModArmorMaterials.GOLD_IRON, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item GOLD_IRON_HELMET = registerItem("gold_iron_helmet", new ArmorItem(ModArmorMaterials.GOLD_IRON, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item GOLD_IRON_CHESTPLATE = registerItem("gold_iron_chestplate", new ArmorItem(ModArmorMaterials.GOLD_IRON, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item GOLD_IRON_LEGGINGS = registerItem("gold_iron_leggings", new ArmorItem(ModArmorMaterials.GOLD_IRON, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item GOLD_IRON_BOOTS = registerItem("gold_iron_boots", new ArmorItem(ModArmorMaterials.GOLD_IRON, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item IRON_NETHERITE_HELMET = registerItem("iron_netherite_helmet", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item IRON_NETHERITE_CHESTPLATE = registerItem("iron_netherite_chestplate", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item IRON_NETHERITE_LEGGINGS = registerItem("iron_netherite_leggings", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item IRON_NETHERITE_BOOTS = registerItem("iron_netherite_boots", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item IRON_NETHERITE_HELMET = registerItem("iron_netherite_helmet", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item IRON_NETHERITE_CHESTPLATE = registerItem("iron_netherite_chestplate", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item IRON_NETHERITE_LEGGINGS = registerItem("iron_netherite_leggings", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item IRON_NETHERITE_BOOTS = registerItem("iron_netherite_boots", new ArmorItem(ModArmorMaterials.IRON_NETHERITE, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item COPPER_NETHERITE_HELMET = registerItem("copper_netherite_helmet", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_NETHERITE_CHESTPLATE = registerItem("copper_netherite_chestplate", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_NETHERITE_LEGGINGS = registerItem("copper_netherite_leggings", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item COPPER_NETHERITE_BOOTS = registerItem("copper_netherite_boots", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_NETHERITE_HELMET = registerItem("copper_netherite_helmet", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_NETHERITE_CHESTPLATE = registerItem("copper_netherite_chestplate", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_NETHERITE_LEGGINGS = registerItem("copper_netherite_leggings", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item COPPER_NETHERITE_BOOTS = registerItem("copper_netherite_boots", new ArmorItem(ModArmorMaterials.COPPER_NETHERITE, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item OXIDIZED_COPPER_HELMET = registerItem("oxidized_copper_helmet", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.HEAD,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item OXIDIZED_COPPER_CHESTPLATE = registerItem("oxidized_copper_chestplate", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.CHEST,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item OXIDIZED_COPPER_LEGGINGS = registerItem("oxidized_copper_leggings", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.LEGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
-    public static final Item OXIDIZED_COPPER_BOOTS = registerItem("oxidized_copper_boots", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, EquipmentSlot.FEET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item OXIDIZED_COPPER_HELMET = registerItem("oxidized_copper_helmet", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item OXIDIZED_COPPER_CHESTPLATE = registerItem("oxidized_copper_chestplate", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item OXIDIZED_COPPER_LEGGINGS = registerItem("oxidized_copper_leggings", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item OXIDIZED_COPPER_BOOTS = registerItem("oxidized_copper_boots", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
     private static Item registerItem(String name, Item item, ItemGroup group) {
         addToItemGroup(group,item);
