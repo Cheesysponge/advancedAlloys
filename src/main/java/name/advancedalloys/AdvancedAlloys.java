@@ -2,6 +2,7 @@ package name.advancedalloys;
 
 import name.advancedalloys.block.ModBlocks;
 import name.advancedalloys.block.entity.ModBlockEntities;
+import name.advancedalloys.item.ModItemGroup;
 import name.advancedalloys.item.ModItems;
 import name.advancedalloys.recipe.ModRecipes;
 import name.advancedalloys.screen.ModScreenHandlers;

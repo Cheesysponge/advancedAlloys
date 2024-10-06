@@ -52,14 +52,12 @@ dependencies {
         modImplementation "me.shedaniel:RoughlyEnoughItems-fabric:${project.rei_version}"
 
         // Optional: Overriding architectury dependency due to REI
-        modImplementation "dev.architectury:architectury-fabric:6.2.43"
+        modImplementation "dev.architectury:architectury-fabric:7.1.86"
     } else {
         throw new GradleException("Invalid runtime_itemlist_mod value: " + project.runtime_itemlist_mod)
     }
 
-    // Optional: If you're using snakeyaml or other additional libraries, add them here.
-    implementation "org.yaml:snakeyaml:${project.snakeyaml_version}"
-    implementation "io.methvin:directory-watcher:${project.directory_watcher_version}"
+
 }
 
 processResources {

@@ -4,6 +4,7 @@ import name.advancedalloys.AdvancedAlloys;
 import name.advancedalloys.block.custom.AlloyBlasterBlock;
 import name.advancedalloys.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -12,9 +13,10 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -36,15 +38,11 @@ public class ModBlocks {
             new AlloyBlasterBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ModItemGroup.BLOCKS);
 
 
-    private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
-        registerBlockItem(name, block, group, tooltipKey);
-        return Registry.register(Registry.BLOCK, new Identifier(AdvancedAlloys.MOD_ID, name), block);
-    }
 
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group, String tooltipKey) {
-        return Registry.register(Registry.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(group)) {
+        return Registry.register(Registries.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()) {
                     @Override
                     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
                         tooltip.add(Text.translatable(tooltipKey));
@@ -54,19 +52,21 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block , group);
-        return Registry.register(Registry.BLOCK, new Identifier(AdvancedAlloys.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(AdvancedAlloys.MOD_ID, name), block);
     }
     private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group){
-        return Registry.register(Registry.BLOCK, new Identifier(AdvancedAlloys.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, new Identifier(AdvancedAlloys.MOD_ID, name), block);
     }
 
-    private static Item registerBlockItem(String name, Block block, ItemGroup group) {
-        return Registry.register(Registry.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings().group(group)));
+    private static Item registerBlockItem(String name, Block block, ItemGroup tab) {
+        Item item = Registry.register(Registries.ITEM, new Identifier(AdvancedAlloys.MOD_ID, name),
+                new BlockItem(block, new FabricItemSettings()));
+        ItemGroupEvents.modifyEntriesEvent(tab).register(entries -> entries.add(item));
+        return item;
     }
-
     public static void registerModBlocks() {
         AdvancedAlloys.LOGGER.info("Registering ModBlocks for " + AdvancedAlloys.MOD_ID);
     }
+
 
 }
