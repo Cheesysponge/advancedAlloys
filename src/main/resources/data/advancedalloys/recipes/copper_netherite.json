@@ -5,10 +5,10 @@
       "item": "minecraft:copper_ingot"
     },
     {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:netherite_ingot"
     }
   ],
   "output": {
-    "item": "advancedalloys:copper_iron_ingot"
+    "item": "advancedalloys:copper_netherite_ingot"
   }
 }

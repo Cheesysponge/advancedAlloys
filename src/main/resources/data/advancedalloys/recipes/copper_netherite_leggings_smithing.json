@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "advancedalloys:copper_netherite_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "result": {
+    "item": "advancedalloys:copper_netherite_leggings"
+  }
+}

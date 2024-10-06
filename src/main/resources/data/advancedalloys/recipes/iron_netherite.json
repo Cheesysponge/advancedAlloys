@@ -1,0 +1,14 @@
+{
+  "type": "advancedalloys:alloy_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "output": {
+    "item": "advancedalloys:iron_netherite_ingot"
+  }
+}

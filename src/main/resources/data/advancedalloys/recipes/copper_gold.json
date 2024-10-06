@@ -2,10 +2,10 @@
   "type": "advancedalloys:alloy_blaster",
   "ingredients": [
     {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:copper_ingot"
     },
     {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:gold_ingot"
     }
   ],
   "output": {

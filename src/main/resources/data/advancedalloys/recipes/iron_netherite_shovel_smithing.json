@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "advancedalloys:iron_netherite_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_shovel"
+  },
+  "result": {
+    "item": "advancedalloys:iron_netherite_shovel"
+  }
+}

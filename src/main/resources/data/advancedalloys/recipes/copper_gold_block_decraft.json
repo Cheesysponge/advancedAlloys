@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "advancedalloys:copper_gold_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "advancedalloys:copper_gold_ingot"
+  }
+}

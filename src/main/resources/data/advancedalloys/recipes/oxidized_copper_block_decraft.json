@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:oxidized_copper"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "advancedalloys:oxidized_copper_ingot"
+  }
+}
