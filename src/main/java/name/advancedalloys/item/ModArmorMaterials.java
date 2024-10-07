@@ -84,7 +84,6 @@ public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
 //        return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT});
 //    });
 
-    public static final StringIdentifiable.Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
     private static final EnumMap<ArmorItem.Type, Integer> BASE_DURABILITY = Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 13);
         map.put(Type.LEGGINGS, 15);
