@@ -20,7 +20,7 @@ import java.util.List;
 
 public class AlloyBlasterRecipeCategory implements DisplayCategory<AlloyBlasterDisplay> {
     public static final Identifier Texture =
-            new Identifier(AdvancedAlloys.MOD_ID,"textures/gui/alloy_blaster_gui.png");
+            new Identifier(AdvancedAlloys.MOD_ID,"textures/gui/alloy_blaster_cooked1.png");
     public static final CategoryIdentifier<AlloyBlasterDisplay> ALLOY_BLASTING =
             CategoryIdentifier.of(AdvancedAlloys.MOD_ID, "alloy_blaster");
 
@@ -49,7 +49,7 @@ public class AlloyBlasterRecipeCategory implements DisplayCategory<AlloyBlasterD
 
         List<Widget> widgets = new ArrayList<>();
 
-        widgets.add(Widgets.createTexturedWidget(Texture, new Rectangle(startPoint.x, startPoint.y, 175, 82)));
+        widgets.add(Widgets.createTexturedWidget(Texture, new Rectangle(startPoint.x, startPoint.y, 176, 78)));
 
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 18, startPoint.y + 50))
                 .entries(display.getRequiredEntries().get(0)));
