@@ -30,11 +30,12 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block COPPER_GOLD_BLOCK = registerBlock("copper_gold_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(6f).requiresTool()), ModItemGroup.BLOCKS);
-
     public static final Block IRON_NETHERITE_BLOCK = registerBlock("iron_netherite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block COPPER_NETHERITE_BLOCK = registerBlock("copper_netherite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
+    public static final Block SILICON_BLOCK = registerBlock("silicon_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(7f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",
             new AlloyBlasterBlock(FabricBlockSettings.copyOf(Blocks.BLAST_FURNACE).strength(4f).requiresTool()), ModItemGroup.BLOCKS);
 

@@ -19,8 +19,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class AlloyBlasterRecipeCategory implements DisplayCategory<AlloyBlasterDisplay> {
+
     public static final Identifier Texture =
-            new Identifier(AdvancedAlloys.MOD_ID,"textures/gui/alloy_blaster_cooked1.png");
+            new Identifier(AdvancedAlloys.MOD_ID,"textures/gui/alloy_blaster_cooked.png");
     public static final CategoryIdentifier<AlloyBlasterDisplay> ALLOY_BLASTING =
             CategoryIdentifier.of(AdvancedAlloys.MOD_ID, "alloy_blaster");
 
@@ -50,7 +51,8 @@ public class AlloyBlasterRecipeCategory implements DisplayCategory<AlloyBlasterD
         List<Widget> widgets = new ArrayList<>();
 
         widgets.add(Widgets.createTexturedWidget(Texture, new Rectangle(startPoint.x, startPoint.y, 176, 78)));
-
+//        x + 18, y + 33 + 14 - handler.getScaledFuelProgress(), 176,
+//                14 - handler.getScaledFuelProgress(), 14, handler.getScaledFuelProgress()
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 18, startPoint.y + 50))
                 .entries(display.getRequiredEntries().get(0)));
         widgets.add(Widgets.createSlot(new Point(startPoint.x + 66, startPoint.y + 16))

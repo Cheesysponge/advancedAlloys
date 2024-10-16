@@ -19,6 +19,8 @@ public class ModItems {
     public static final Item COPPER_NETHERITE_INGOT = registerItem("copper_netherite_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
     public static final Item IRON_NETHERITE_INGOT = registerItem("iron_netherite_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
     public static final Item OXIDIZED_COPPER_INGOT = registerItem("oxidized_copper_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
+    public static final Item SILICON_INGOT = registerItem("silicon_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
+
 
 
 
@@ -66,6 +68,13 @@ public class ModItems {
     public static final Item OXIDIZED_COPPER_SHOVEL = registerItem("oxidized_copper_shovel", new OxidizedCopperShovelItem(ModToolMaterials.OXIDIZED_COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item OXIDIZED_COPPER_HOE = registerItem("oxidized_copper_hoe", new OxidizedCopperHoeItem(ModToolMaterials.OXIDIZED_COPPER,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
+    public static final Item SILICON_SWORD = registerItem("silicon_sword", new SwordItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_PICKAXE = registerItem("silicon_pickaxe", new PickaxeItem(ModToolMaterials.SILICON,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_AXE = registerItem("silicon_axe", new AxeItem(ModToolMaterials.SILICON,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_SHOVEL = registerItem("silicon_shovel", new ShovelItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_HOE = registerItem("silicon_hoe", new ModHoeItem(ModToolMaterials.SILICON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    
+
 
     // Armors
     public static final Item COPPER_HELMET = registerItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER, ArmorItem.Type.HELMET,new FabricItemSettings().maxCount(1)), ModItemGroup.ARMOR);
@@ -102,6 +111,11 @@ public class ModItems {
     public static final Item OXIDIZED_COPPER_CHESTPLATE = registerItem("oxidized_copper_chestplate", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
     public static final Item OXIDIZED_COPPER_LEGGINGS = registerItem("oxidized_copper_leggings", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
     public static final Item OXIDIZED_COPPER_BOOTS = registerItem("oxidized_copper_boots", new OxidizedCopperArmorItem(ModArmorMaterials.OXIDIZED_COPPER, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+
+    public static final Item SILICON_HELMET = registerItem("silicon_helmet", new ArmorItem(ModArmorMaterials.SILICON, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item SILICON_CHESTPLATE = registerItem("silicon_chestplate", new ArmorItem(ModArmorMaterials.SILICON, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item SILICON_LEGGINGS = registerItem("silicon_leggings", new ArmorItem(ModArmorMaterials.SILICON, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item SILICON_BOOTS = registerItem("silicon_boots", new ArmorItem(ModArmorMaterials.SILICON, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
     private static Item registerItem(String name, Item item, ItemGroup group) {
 //        addToItemGroup(group,item);

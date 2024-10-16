@@ -42,11 +42,19 @@ public class ModItemGroup {
                         entries.add(ModItems.COPPER_NETHERITE_INGOT);
                         entries.add(ModItems.IRON_NETHERITE_INGOT);
                         entries.add(ModItems.OXIDIZED_COPPER_INGOT);
+                        entries.add(ModItems.SILICON_INGOT);
+
                     }).build());
     public static final ItemGroup TOOLS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdvancedAlloys.MOD_ID, "tools"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.advancedalloys.tools"))
                     .icon(() -> new ItemStack(ModItems.OXIDIZED_COPPER_PICKAXE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.COPPER_PICKAXE);
+                        entries.add(ModItems.COPPER_AXE);
+                        entries.add(ModItems.COPPER_SWORD);
+                        entries.add(ModItems.COPPER_HOE);
+                        entries.add(ModItems.COPPER_SHOVEL);
+
                         entries.add(ModItems.COPPER_IRON_PICKAXE);
                         entries.add(ModItems.COPPER_IRON_AXE);
                         entries.add(ModItems.COPPER_IRON_SWORD);
@@ -82,11 +90,22 @@ public class ModItemGroup {
                         entries.add(ModItems.OXIDIZED_COPPER_SWORD);
                         entries.add(ModItems.OXIDIZED_COPPER_HOE);
                         entries.add(ModItems.OXIDIZED_COPPER_SHOVEL);
+
+                        entries.add(ModItems.SILICON_PICKAXE);
+                        entries.add(ModItems.SILICON_AXE);
+                        entries.add(ModItems.SILICON_SWORD);
+                        entries.add(ModItems.SILICON_HOE);
+                        entries.add(ModItems.SILICON_SHOVEL);
                     }).build());
     public static final ItemGroup ARMOR = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdvancedAlloys.MOD_ID, "armor"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.advancedalloys.armor"))
                     .icon(() -> new ItemStack(ModItems.COPPER_NETHERITE_CHESTPLATE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.COPPER_HELMET);
+                        entries.add(ModItems.COPPER_CHESTPLATE);
+                        entries.add(ModItems.COPPER_LEGGINGS);
+                        entries.add(ModItems.COPPER_BOOTS);
+
                         entries.add(ModItems.COPPER_IRON_HELMET);
                         entries.add(ModItems.COPPER_IRON_CHESTPLATE);
                         entries.add(ModItems.COPPER_IRON_LEGGINGS);
@@ -119,6 +138,11 @@ public class ModItemGroup {
                         entries.add(ModItems.OXIDIZED_COPPER_LEGGINGS);
                         entries.add(ModItems.OXIDIZED_COPPER_BOOTS);
 
+                        entries.add(ModItems.SILICON_HELMET);
+                        entries.add(ModItems.SILICON_CHESTPLATE);
+                        entries.add(ModItems.SILICON_LEGGINGS);
+                        entries.add(ModItems.SILICON_BOOTS);
+
                     }).build());
     public static final ItemGroup BLOCKS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdvancedAlloys.MOD_ID, "blocks"),
@@ -129,6 +153,8 @@ public class ModItemGroup {
                         entries.add(ModBlocks.GOLD_IRON_BLOCK);
                         entries.add(ModBlocks.COPPER_NETHERITE_BLOCK);
                         entries.add(ModBlocks.IRON_NETHERITE_BLOCK);
+                        entries.add(ModBlocks.SILICON_BLOCK);
+
                         entries.add(ModBlocks.ALLOY_BLASTER);
                     }).build());
 

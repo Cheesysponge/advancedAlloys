@@ -1,0 +1,14 @@
+{
+  "type": "advancedalloys:alloy_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:smooth_quartz"
+    },
+    {
+      "item": "minecraft:smooth_quartz"
+    }
+  ],
+  "output": {
+    "item": "advancedalloys:silicon_ingot"
+  }
+}

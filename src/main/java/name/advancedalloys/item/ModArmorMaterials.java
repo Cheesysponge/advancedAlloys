@@ -59,7 +59,12 @@ public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
         map.put(Type.CHESTPLATE, 7);
         map.put(Type.HELMET, 3);
     }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 1f, () -> Ingredient.ofItems(ModItems.OXIDIZED_COPPER_INGOT)),
-    ;
+    SILICON("silicon", 33, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 8);
+        map.put(Type.HELMET, 3);
+    }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_INGOT)),;
 
 
 //    LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
