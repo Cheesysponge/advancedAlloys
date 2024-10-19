@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "advancedalloys:silicon_ingot"
+    }
+  },
+  "result": {
+    "item": "advancedalloys:silicon_chestplate"
+  }
+}

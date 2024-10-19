@@ -18,7 +18,9 @@
     "main": [
       "name.advancedalloys.AdvancedAlloys"
     ],
-    "rei_client": ["name.advancedalloys.compat.ModREIClientPlugin"]
+    "rei_client": ["name.advancedalloys.compat.ModREIClientPlugin"],
+    "fabric-datagen": ["name.advancedalloys.datagen.ModDataGeneration"]
+
   },
   "mixins": [
     "advancedalloys.mixins.json"

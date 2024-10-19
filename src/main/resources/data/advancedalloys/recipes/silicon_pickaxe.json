@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "advancedalloys:silicon_ingot"
+    }
+  },
+  "result": {
+    "item": "advancedalloys:silicon_pickaxe"
+  }
+}
