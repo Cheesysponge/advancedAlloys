@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "advancedalloys:iron_netherite_ingot"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    " I ",
+    " I "
+  ],
+  "result": {
+    "item": "advancedalloys:iron_netherite_pickaxe"
+  },
+  "show_notification": true
+}

@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:smithing",
+  "type": "minecraft:smithing_transform",
   "addition": {
     "item": "advancedalloys:iron_netherite_ingot"
   },
@@ -8,5 +8,8 @@
   },
   "result": {
     "item": "advancedalloys:iron_netherite_sword"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
   }
 }

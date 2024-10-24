@@ -1,6 +1,5 @@
 package name.advancedalloys.item;
 
-import me.shedaniel.rei.api.client.gui.widgets.Widget;
 import name.advancedalloys.AdvancedAlloys;
 import name.advancedalloys.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -9,9 +8,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ModItems {
     // Ingots

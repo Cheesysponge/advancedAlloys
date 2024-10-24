@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "advancedalloys:copper_iron_ingot"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "I"
+  ],
+  "result": {
+    "item": "advancedalloys:copper_iron_sword"
+  },
+  "show_notification": true
+}

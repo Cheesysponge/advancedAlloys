@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "advancedalloys:silicon_block"
+    }
+  ],
+  "result": {
+    "item": "advancedalloys:silicon_ingot"
+  }
+}

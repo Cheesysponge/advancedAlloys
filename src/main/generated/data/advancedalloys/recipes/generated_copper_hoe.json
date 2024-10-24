@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:copper_ingot"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "##",
+    "I ",
+    "I "
+  ],
+  "result": {
+    "item": "advancedalloys:copper_hoe"
+  },
+  "show_notification": true
+}
