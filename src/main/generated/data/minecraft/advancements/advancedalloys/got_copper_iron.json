@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_copper_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Copper Iron is better than iron AND copper!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:copper_iron_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Copper Iron"
+    }
+  },
+  "requirements": [
+    [
+      "got_copper_iron"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

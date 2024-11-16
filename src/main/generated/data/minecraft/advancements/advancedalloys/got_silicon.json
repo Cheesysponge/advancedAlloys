@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_silicon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:silicon_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Silicon has special properties"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:silicon_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Silicon"
+    }
+  },
+  "requirements": [
+    [
+      "got_silicon"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

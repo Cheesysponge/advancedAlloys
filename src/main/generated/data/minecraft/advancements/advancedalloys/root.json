@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "got_blaster": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:alloy_blaster"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "advancedalloys:textures/block/copper_gold_block.png",
+    "description": {
+      "text": "Time to make some alloys"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:alloy_blaster"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Your First Alloy Blaster"
+    }
+  },
+  "requirements": [
+    [
+      "got_blaster"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

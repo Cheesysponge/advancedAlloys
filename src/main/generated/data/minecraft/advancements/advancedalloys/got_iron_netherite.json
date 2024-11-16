@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_iron_netherite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:iron_netherite_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Iron Netherite is stronger than netherite!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:iron_netherite_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Iron Netherite"
+    }
+  },
+  "requirements": [
+    [
+      "got_iron_netherite"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

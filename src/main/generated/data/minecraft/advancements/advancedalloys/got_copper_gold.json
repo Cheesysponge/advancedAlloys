@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_copper_gold": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_gold_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Copper Gold is better than gold AND copper!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:copper_gold_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Copper Gold"
+    }
+  },
+  "requirements": [
+    [
+      "got_copper_gold"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

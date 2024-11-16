@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_oxidized_copper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Oxidized Copper has special properties"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:oxidized_copper_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Oxidized Copper"
+    }
+  },
+  "requirements": [
+    [
+      "got_oxidized_copper"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

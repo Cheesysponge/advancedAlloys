@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_gold_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:gold_iron_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Gold Iron is better than iron AND gold!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:gold_iron_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Gold Iron"
+    }
+  },
+  "requirements": [
+    [
+      "got_gold_iron"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}
