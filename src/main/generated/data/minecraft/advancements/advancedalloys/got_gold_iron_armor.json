@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_gold_iron",
+  "criteria": {
+    "got_gold_iron_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:gold_iron_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:gold_iron_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:gold_iron_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:gold_iron_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Gold Iron Armor"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:gold_iron_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Gilded Iron Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_gold_iron_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

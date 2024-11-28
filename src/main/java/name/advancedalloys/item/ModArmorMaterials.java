@@ -41,13 +41,13 @@ public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
         map.put(Type.CHESTPLATE, 6);
         map.put(Type.HELMET, 2);
     }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
-    COPPER_NETHERITE("copper_netherite", 40, Util.make(new EnumMap(Type.class), (map) -> {
+    COPPER_NETHERITE("copper_netherite", 42, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
-    IRON_NETHERITE("iron_netherite", 37, Util.make(new EnumMap(Type.class), (map) -> {
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0.05f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
+    IRON_NETHERITE("iron_netherite", 35, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);

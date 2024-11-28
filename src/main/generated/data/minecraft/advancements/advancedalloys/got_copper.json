@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:advancedalloys/root",
   "criteria": {
-    "got_copper_netherite": {
+    "got_copper": {
       "conditions": {
         "items": [
           {
             "items": [
-              "advancedalloys:copper_netherite_ingot"
+              "minecraft:copper_ingot"
             ]
           }
         ]
@@ -17,21 +17,21 @@
   "display": {
     "announce_to_chat": true,
     "description": {
-      "text": "Copper Netherite is more durable than netherite!"
+      "text": "Copper is very useful for tools and armor!"
     },
-    "frame": "goal",
+    "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "advancedalloys:copper_netherite_ingot"
+      "item": "minecraft:copper_ingot"
     },
     "show_toast": true,
     "title": {
-      "text": "Copper Netherite"
+      "text": "Coppering Time"
     }
   },
   "requirements": [
     [
-      "got_copper_netherite"
+      "got_copper"
     ]
   ],
   "rewards": {

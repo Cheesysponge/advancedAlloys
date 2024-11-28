@@ -36,6 +36,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(12f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block SILICON_BLOCK = registerBlock("silicon_block",
             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(7f).requiresTool()), ModItemGroup.BLOCKS);
+    public static final Block MIXED_BLOCK = registerBlock("mixed_block",
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).strength(7f).requiresTool()), ModItemGroup.BLOCKS);
     public static final Block[] alloy_blocks = new Block[] {COPPER_IRON_BLOCK,GOLD_IRON_BLOCK,COPPER_GOLD_BLOCK,IRON_NETHERITE_BLOCK,COPPER_NETHERITE_BLOCK,SILICON_BLOCK};
 
     public static final Block ALLOY_BLASTER = registerBlock("alloy_blaster",

@@ -1,5 +1,6 @@
 package name.advancedalloys.datagen;
 
+import name.advancedalloys.block.ModBlocks;
 import name.advancedalloys.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -17,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIXED_BLOCK);
     }
 
     @Override

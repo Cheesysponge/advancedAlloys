@@ -19,7 +19,7 @@
     "description": {
       "text": "Iron Netherite is stronger than netherite!"
     },
-    "frame": "task",
+    "frame": "goal",
     "hidden": false,
     "icon": {
       "item": "advancedalloys:iron_netherite_ingot"
@@ -35,7 +35,7 @@
     ]
   ],
   "rewards": {
-    "experience": 100
+    "experience": 1000
   },
   "sends_telemetry_event": true
 }

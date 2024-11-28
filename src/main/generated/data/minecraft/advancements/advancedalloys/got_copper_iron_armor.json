@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_copper_iron",
+  "criteria": {
+    "got_copper_iron_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_iron_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_iron_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_iron_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_iron_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Copper Iron Armor"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:copper_iron_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Ferrous Copper Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_copper_iron_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

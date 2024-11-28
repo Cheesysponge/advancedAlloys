@@ -15,7 +15,7 @@
   },
   "display": {
     "announce_to_chat": true,
-    "background": "advancedalloys:textures/block/copper_gold_block.png",
+    "background": "advancedalloys:textures/block/mixed_block.png",
     "description": {
       "text": "Time to make some alloys"
     },

@@ -71,6 +71,10 @@ public class ModItems {
     public static final Item SILICON_SHOVEL = registerItem("silicon_shovel", new ShovelItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_HOE = registerItem("silicon_hoe", new ModHoeItem(ModToolMaterials.SILICON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
+    public static final Item KATANA = registerItem("katana", new ModKatanaItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
+
+
     public static final Item[] tools = new Item[] {COPPER_SWORD, COPPER_PICKAXE, COPPER_AXE, COPPER_SHOVEL, COPPER_HOE,
             COPPER_IRON_SWORD, COPPER_IRON_PICKAXE, COPPER_IRON_AXE, COPPER_IRON_SHOVEL, COPPER_IRON_HOE,
             COPPER_GOLD_SWORD, COPPER_GOLD_PICKAXE, COPPER_GOLD_AXE, COPPER_GOLD_SHOVEL, COPPER_GOLD_HOE,

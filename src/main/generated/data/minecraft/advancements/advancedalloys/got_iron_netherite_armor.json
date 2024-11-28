@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_iron_netherite",
+  "criteria": {
+    "got_iron_netherite_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:iron_netherite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:iron_netherite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:iron_netherite_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:iron_netherite_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Iron Netherite Armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:iron_netherite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Smooth Stone Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_iron_netherite_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "sends_telemetry_event": true
+}

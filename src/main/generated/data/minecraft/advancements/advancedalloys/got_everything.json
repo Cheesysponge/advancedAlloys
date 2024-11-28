@@ -1,0 +1,71 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_everything": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_iron_ingot"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:gold_iron_ingot"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_gold_ingot"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_netherite_ingot"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:iron_netherite_ingot"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_ingot"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get everything."
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "advancedalloys:mixed_block"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Mixing Everything"
+    }
+  },
+  "requirements": [
+    [
+      "got_everything"
+    ]
+  ],
+  "rewards": {
+    "experience": 100000
+  },
+  "sends_telemetry_event": true
+}

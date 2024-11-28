@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_oxidized_copper",
+  "criteria": {
+    "got_oxidized_copper_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Oxidized Copper Armor which is perfectly fine and has no issues whatsoever"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:oxidized_copper_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Gilded Copper Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_oxidized_copper_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

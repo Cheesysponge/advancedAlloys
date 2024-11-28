@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_copper_netherite",
+  "criteria": {
+    "got_copper_netherite_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_netherite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_netherite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_netherite_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_netherite_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Copper Netherite Armor which DOES NOT LOOK LIKE POO"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:copper_netherite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Copper Netherite Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_copper_netherite_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

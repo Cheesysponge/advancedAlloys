@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_silicon",
+  "criteria": {
+    "got_silicon_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:silicon_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Silicon Armor"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:silicon_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Silicon Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_silicon_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

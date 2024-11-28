@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_copper",
+  "criteria": {
+    "got_copper_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Copper Armor"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:copper_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Copper Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_copper_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}
