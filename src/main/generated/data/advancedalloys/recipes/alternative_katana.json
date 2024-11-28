@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "advancedalloys:silicon_block"
+    },
+    "I": {
+      "item": "advancedalloys:iron_netherite_ingot"
+    },
+    "N": {
+      "item": "advancedalloys:oxidized_copper_ingot"
+    },
+    "O": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "pattern": [
+    " O#",
+    "N#O",
+    "IN "
+  ],
+  "result": {
+    "item": "advancedalloys:katana"
+  },
+  "show_notification": true
+}

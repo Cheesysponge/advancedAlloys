@@ -1,5 +1,6 @@
 package name.advancedalloys.datagen;
 
+import dev.architectury.platform.Mod;
 import name.advancedalloys.AdvancedAlloys;
 import name.advancedalloys.block.ModBlocks;
 import name.advancedalloys.item.ModItems;
@@ -35,7 +36,23 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.OBSERVER),
                         FabricRecipeProvider.conditionsFromItem(Items.OBSERVER))
                 .offerTo(exporter, new Identifier("alternative_"+FabricRecipeProvider.getRecipeName(ModBlocks.ALLOY_BLASTER)));//FabricRecipeProvider.getRecipeName(ModBlocks.ALLOY_BLASTER)));
-
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.KATANA)
+                .pattern(" O#")
+                .pattern("N#O")
+                .pattern("IN ")
+                .input('I', ModItems.IRON_NETHERITE_INGOT)
+                .input('#', ModBlocks.SILICON_BLOCK)
+                .input('N', ModItems.OXIDIZED_COPPER_INGOT)
+                .input('O', Items.IRON_BLOCK)
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_BLOCK),
+                        FabricRecipeProvider.conditionsFromItem(Items.IRON_BLOCK))
+                .criterion(FabricRecipeProvider.hasItem(ModBlocks.SILICON_BLOCK),
+                        FabricRecipeProvider.conditionsFromItem(ModBlocks.SILICON_BLOCK))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.OXIDIZED_COPPER_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.OXIDIZED_COPPER_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.IRON_NETHERITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.IRON_NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier("alternative_"+FabricRecipeProvider.getRecipeName(ModItems.KATANA)));
         for(int i = 0; i<ModItems.tools.length; i++) {
             recipeGenerator(exporter, ModItems.tools[i]);
         }

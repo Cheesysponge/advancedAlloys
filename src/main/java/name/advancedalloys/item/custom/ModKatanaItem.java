@@ -88,7 +88,7 @@ public class ModKatanaItem extends SwordItem implements Vanishable {
                     if (entity != user && entity.isLiving()) {
                         ((LivingEntity) user).limbAnimator.setSpeed(40);
                         entity.damage(entity.getDamageSources().thrown((LivingEntity) user,user), 6);
-                        entity.addVelocity(user.getVelocity().multiply(5,5,5));
+                        entity.addVelocity(user.getVelocity().multiply(3,3,3));
                         user.setVelocity(user.getVelocity().multiply(-0.1));
                         user.getWorld().syncWorldEvent(WorldEvents.BLOCK_SCRAPED, user.getBlockPos(), 0);
                         ((PlayerEntity) user).addCritParticles(user);

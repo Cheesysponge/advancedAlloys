@@ -72,6 +72,10 @@ public class ModItems {
     public static final Item SILICON_HOE = registerItem("silicon_hoe", new ModHoeItem(ModToolMaterials.SILICON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
     public static final Item KATANA = registerItem("katana", new ModKatanaItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_SULFATE = registerItem("silicon_sulfate", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
+    public static final Item SILICON_SULFATE_DETONATOR = registerItem("silicon_sulfate_detonator", new ExplosiveItem(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
 
 
 

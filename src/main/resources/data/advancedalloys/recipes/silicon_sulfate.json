@@ -1,0 +1,14 @@
+{
+  "type": "advancedalloys:alloy_blaster",
+  "ingredients": [
+    {
+      "item": "advancedalloys:silicon_ingot"
+    },
+    {
+      "item": "minecraft:creeper_head"
+    }
+  ],
+  "output": {
+    "item": "advancedalloys:silicon_sulfate"
+  }
+}
