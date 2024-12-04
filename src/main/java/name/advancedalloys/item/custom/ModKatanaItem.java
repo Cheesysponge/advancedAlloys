@@ -1,5 +1,6 @@
 package name.advancedalloys.item.custom;
 
+import name.advancedalloys.AdvancedAlloys;
 import net.minecraft.entity.*;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -80,18 +81,22 @@ public class ModKatanaItem extends SwordItem implements Vanishable {
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity user, int slot, boolean selected) {
         if(user instanceof LivingEntity && selected && slot==8) {
+            user.fallDistance = 0;
+
             Box box = user.getBoundingBox();
             List<Entity> list = user.getWorld().getOtherEntities(user, box);
             if (!list.isEmpty()) {
                 for (int i = 0; i < list.size(); ++i) {
                     Entity entity = list.get(i);
-                    if (entity != user && entity.isLiving()) {
+                    if (entity != user && entity.isLiving() && user.getVelocity().length()>0.4) {
+                        //AdvancedAlloys.LOGGER.info(String.valueOf(15*((LivingEntity) user).getVelocity().length()));
                         ((LivingEntity) user).limbAnimator.setSpeed(40);
-                        entity.damage(entity.getDamageSources().thrown((LivingEntity) user,user), 6);
-                        entity.addVelocity(user.getVelocity().multiply(3,3,3));
-                        user.setVelocity(user.getVelocity().multiply(-0.1));
+                        entity.damage(entity.getDamageSources().mobProjectile( user, (LivingEntity) user), (float) (30*( user).getVelocity().length()));
+                        entity.addVelocity(user.getVelocity().multiply(5,5,5));
+                        user.setVelocity(user.getVelocity().multiply(-0.2));
                         user.getWorld().syncWorldEvent(WorldEvents.BLOCK_SCRAPED, user.getBlockPos(), 0);
                         ((PlayerEntity) user).addCritParticles(user);
+                        entity.timeUntilRegen=0;
                         break;
                     }
                 }
@@ -151,7 +156,7 @@ public class ModKatanaItem extends SwordItem implements Vanishable {
 
 
             }
-            ((PlayerEntity) user).getItemCooldownManager().set(this, 10);
+            //((PlayerEntity) user).getItemCooldownManager().set(this, 10);
 
         }
     }

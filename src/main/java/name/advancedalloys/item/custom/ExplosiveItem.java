@@ -37,9 +37,9 @@ public class ExplosiveItem extends Item implements Vanishable {
         //AdvancedAlloys.LOGGER.info(String.valueOf(creeper.getFuseSpeed()) + " Fuse Speed");
         user.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE,35,4));
         world.spawnEntity(creeper);
-        world.createExplosion(creeper,creeper.getX(), creeper.getY(), creeper.getZ(),2, false, World.ExplosionSourceType.MOB);
+        world.createExplosion(creeper,creeper.getX(), creeper.getY(), creeper.getZ(),3, false, World.ExplosionSourceType.MOB);
         super.onStoppedUsing(stack, world, user, remainingUseTicks);
-        ((PlayerEntity) user).getItemCooldownManager().set(this, 1200);
+        ((PlayerEntity) user).getItemCooldownManager().set(this, 600);
 
     }
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
