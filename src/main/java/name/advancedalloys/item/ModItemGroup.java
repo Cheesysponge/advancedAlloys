@@ -68,6 +68,14 @@ public class ModItemGroup {
                             entries.add(ModItems.armor[i]);
                         }
                     }).build());
+    public static final ItemGroup SPECIAL = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(AdvancedAlloys.MOD_ID, "special"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.advancedalloys.armor"))
+                    .icon(() -> new ItemStack(ModItems.SILICON_SULFATE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.SILICON_SULFATE);
+                        entries.add(ModItems.SILICON_SULFATE_DETONATOR);
+                        entries.add(ModItems.KATANA);
+                    }).build());
     public static final ItemGroup BLOCKS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdvancedAlloys.MOD_ID, "blocks"),
             FabricItemGroup.builder().displayName(Text.translatable("itemGroup.advancedalloys.blocks"))
@@ -82,6 +90,8 @@ public class ModItemGroup {
 //                        entries.add(ModBlocks.IRON_NETHERITE_BLOCK);
 //                        entries.add(ModBlocks.SILICON_BLOCK);
                         entries.add(ModBlocks.ALLOY_BLASTER);
+                        entries.add(ModBlocks.MIXED_BLOCK);
+
                     }).build());
 
 

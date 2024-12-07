@@ -109,6 +109,8 @@
   "block.advancedalloys.iron_netherite_block": "Iron-Netherite Block",
   "block.advancedalloys.copper_netherite_block": "Copper-Netherite Block",
   "block.advancedalloys.silicon_block": "Silicon Block",
+  "block.advancedalloys.mixed_block": "Mixed Block(For Advancement Menu only)",
+
 
   "block.advancedalloys.alloy_blaster": "Alloy Blaster",
 
@@ -119,5 +121,7 @@
   "itemGroup.advancedalloys.alloy": "Alloys",
   "itemGroup.advancedalloys.blocks": "Blocks",
   "itemGroup.advancedalloys.armor": "Armor",
-  "itemGroup.advancedalloys.tools": "Tools"
+  "itemGroup.advancedalloys.tools": "Tools",
+  "itemGroup.advancedalloys.special": "Special Items"
+
 }
