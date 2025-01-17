@@ -18,8 +18,10 @@ public class ModItems {
     public static final Item IRON_NETHERITE_INGOT = registerItem("iron_netherite_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
     public static final Item OXIDIZED_COPPER_INGOT = registerItem("oxidized_copper_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
     public static final Item SILICON_INGOT = registerItem("silicon_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
+    public static final Item SILICON_NETHERITE_INGOT = registerItem("silicon_netherite_ingot", new Item(new FabricItemSettings()), ModItemGroup.ALLOYS);
 
-    public static final Item[] ingots = new Item[] {COPPER_IRON_INGOT,GOLD_IRON_INGOT,COPPER_GOLD_INGOT,COPPER_NETHERITE_INGOT,IRON_NETHERITE_INGOT,OXIDIZED_COPPER_INGOT,SILICON_INGOT};
+
+    public static final Item[] ingots = new Item[] {COPPER_IRON_INGOT,GOLD_IRON_INGOT,COPPER_GOLD_INGOT,COPPER_NETHERITE_INGOT,IRON_NETHERITE_INGOT,OXIDIZED_COPPER_INGOT,SILICON_INGOT, SILICON_NETHERITE_INGOT};
 
     // Tools
 

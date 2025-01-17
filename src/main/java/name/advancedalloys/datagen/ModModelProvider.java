@@ -5,10 +5,15 @@ import name.advancedalloys.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 
+import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.item.Item;
+import net.minecraft.util.Identifier;
+
+import static net.minecraft.data.server.recipe.RecipeProvider.getRecipeName;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -18,6 +23,11 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIXED_BLOCK);
+        for(Block block : ModBlocks.alloy_blocks) {
+            blockStateModelGenerator.registerParentedItemModel(block, Identifier.of("advancedalloys","block/"+getRecipeName(block.asItem())));
+        }
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.ALLOY_BLASTER, Identifier.of("advancedalloys","block/"+getRecipeName(ModBlocks.ALLOY_BLASTER.asItem())));
+        blockStateModelGenerator.registerParentedItemModel(ModBlocks.MIXED_BLOCK, Identifier.of("advancedalloys","block/"+getRecipeName(ModBlocks.MIXED_BLOCK.asItem())));
     }
 
     @Override
@@ -25,6 +35,13 @@ public class ModModelProvider extends FabricModelProvider {
         for(int i = 0; i< ModItems.armor.length; i++) {
             itemModelGenerator.registerArmor((ArmorItem) ModItems.armor[i]);
         }
+        for(Item block : ModItems.tools) {
+            itemModelGenerator.register(block, Models.HANDHELD);
+        }
+        for(Item block : ModItems.ingots) {
+            itemModelGenerator.register(block, Models.GENERATED);
+        }
+
         itemModelGenerator.register(ModItems.SILICON_SULFATE,Models.GENERATED);
         itemModelGenerator.register(ModItems.SILICON_SULFATE_DETONATOR,Models.GENERATED);
 

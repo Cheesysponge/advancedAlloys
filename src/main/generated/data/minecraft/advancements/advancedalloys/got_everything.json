@@ -38,6 +38,11 @@
             "items": [
               "advancedalloys:silicon_ingot"
             ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_ingot"
+            ]
           }
         ]
       },

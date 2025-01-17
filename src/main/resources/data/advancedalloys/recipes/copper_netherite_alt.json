@@ -1,0 +1,14 @@
+{
+  "type": "advancedalloys:alloy_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "output": {
+    "item": "advancedalloys:copper_netherite_ingot"
+  }
+}

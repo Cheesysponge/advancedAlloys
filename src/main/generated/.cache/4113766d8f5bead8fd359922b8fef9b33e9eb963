@@ -1,8 +1,8 @@
-// 1.20.1	2024-11-28T11:45:01.4368776	Advanced Alloys/Block Loot Tables
+// 1.20.1	2025-01-17T14:46:38.9266591	Advanced Alloys/Block Loot Tables
+cf7809aaa2dddeb6ed8f35b39939d39e8b856fd8 data\advancedalloys\loot_tables\blocks\copper_netherite_block.json
 74fb307eabbb5de916725b20f9dc06c2412a7cb5 data\advancedalloys\loot_tables\blocks\alloy_blaster.json
-02b7731f864d4d158a3acdf40d029cd1a4ce9dce data\advancedalloys\loot_tables\blocks\copper_iron_block.json
 f35ea4c6c388b8a36e5816b8be0558509c6652ac data\advancedalloys\loot_tables\blocks\copper_gold_block.json
 cf5c7192bf53375642483fea3ba65bd5ab366385 data\advancedalloys\loot_tables\blocks\iron_netherite_block.json
-cf7809aaa2dddeb6ed8f35b39939d39e8b856fd8 data\advancedalloys\loot_tables\blocks\copper_netherite_block.json
-38d478276e136a771b75b08c5d460a45f1010747 data\advancedalloys\loot_tables\blocks\silicon_block.json
 a675d1698ae1be2ffe2dbcb7c7ce12a0726135e2 data\advancedalloys\loot_tables\blocks\gold_iron_block.json
+38d478276e136a771b75b08c5d460a45f1010747 data\advancedalloys\loot_tables\blocks\silicon_block.json
+02b7731f864d4d158a3acdf40d029cd1a4ce9dce data\advancedalloys\loot_tables\blocks\copper_iron_block.json
