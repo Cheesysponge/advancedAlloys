@@ -63,11 +63,11 @@
   "item.advancedalloys.silicon_shovel": "Silicon Shovel",
   "item.advancedalloys.silicon_sword": "Silicon Sword",
 
-  "item.advancedalloys. silicon_netherite_axe": " Silicon Netherite Axe",
-  "item.advancedalloys. silicon_netherite_pickaxe": " Silicon Netherite Pickaxe",
-  "item.advancedalloys. silicon_netherite_hoe": " Silicon Netherite Hoe",
-  "item.advancedalloys. silicon_netherite_shovel": " Silicon Netherite Shovel",
-  "item.advancedalloys. silicon_netherite_sword": " Silicon Netherite Sword",
+  "item.advancedalloys.silicon_netherite_axe": "Silicon Netherite Axe",
+  "item.advancedalloys.silicon_netherite_pickaxe": "Silicon Netherite Pickaxe",
+  "item.advancedalloys.silicon_netherite_hoe": "Silicon Netherite Hoe",
+  "item.advancedalloys.silicon_netherite_shovel": "Silicon Netherite Shovel",
+  "item.advancedalloys.silicon_netherite_sword": "Silicon Netherite Sword",
 
 
   "item.advancedalloys.copper_helmet": "Copper Helmet",
@@ -110,10 +110,10 @@
   "item.advancedalloys.silicon_leggings": "Silicon Leggings",
   "item.advancedalloys.silicon_boots": "Silicon Boots",
 
-  "item.advancedalloys. silicon_netherite_helmet": " Silicon Netherite Helmet",
-  "item.advancedalloys. silicon_netherite_chestplate": " Silicon Netherite Chestplate",
-  "item.advancedalloys. silicon_netherite_leggings": " Silicon Netherite Leggings",
-  "item.advancedalloys. silicon_netherite_boots": " Silicon Netherite Boots",
+  "item.advancedalloys.silicon_netherite_helmet": "Silicon Netherite Helmet",
+  "item.advancedalloys.silicon_netherite_chestplate": "Silicon Netherite Chestplate",
+  "item.advancedalloys.silicon_netherite_leggings": "Silicon Netherite Leggings",
+  "item.advancedalloys.silicon_netherite_boots": "Silicon Netherite Boots",
 
   "block.advancedalloys.gold_iron_block": "Gold Iron Block",
   "block.advancedalloys.copper_gold_block": "Copper Gold Block",
