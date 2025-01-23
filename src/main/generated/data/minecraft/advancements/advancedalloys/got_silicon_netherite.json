@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "got_silicon_netherite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Silicon Netherite is better than netherite!"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:silicon_netherite_ingot"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Silicon Netherite"
+    }
+  },
+  "requirements": [
+    [
+      "got_silicon_netherite"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "sends_telemetry_event": true
+}

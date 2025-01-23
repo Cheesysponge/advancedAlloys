@@ -264,7 +264,34 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .rewards(AdvancementRewards.Builder.experience(100))
                 .criterion("got_oxidized_copper_armor", InventoryChangedCriterion.Conditions.items(ModItems.OXIDIZED_COPPER_CHESTPLATE,ModItems.OXIDIZED_COPPER_LEGGINGS,ModItems.OXIDIZED_COPPER_BOOTS,ModItems.OXIDIZED_COPPER_HELMET))
                 .build(consumer, "advancedalloys" + "/got_oxidized_copper_armor");
-
+        Advancement getSiliconNetheriteAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                .display(
+                        ModItems.SILICON_NETHERITE_INGOT,
+                        Text.literal("Silicon Netherite"),
+                        Text.literal("Silicon Netherite is better than netherite!"),
+                        null, // children to parent advancements don't need a background set
+                        AdvancementFrame.GOAL,
+                        true,
+                        true,
+                        false
+                )
+                .rewards(AdvancementRewards.Builder.experience(1000))
+                .criterion("got_silicon_netherite", InventoryChangedCriterion.Conditions.items(ModItems.SILICON_NETHERITE_INGOT))
+                .build(consumer, "advancedalloys" + "/got_silicon_netherite");
+        Advancement getSiliconNetheriteArmorAdvancement = Advancement.Builder.create().parent(getSiliconNetheriteAdvancement)
+                .display(
+                        ModItems.SILICON_NETHERITE_CHESTPLATE,
+                        Text.literal("Nicer Netherite Armor"),
+                        Text.literal("Get a full set of Silicon Netherite Armor"),
+                        null, // children to parent advancements don't need a background set
+                        AdvancementFrame.CHALLENGE,
+                        true,
+                        true,
+                        false
+                )
+                .rewards(AdvancementRewards.Builder.experience(1000))
+                .criterion("got_silicon_netherite_armor", InventoryChangedCriterion.Conditions.items(ModItems.SILICON_NETHERITE_CHESTPLATE,ModItems.SILICON_NETHERITE_LEGGINGS,ModItems.SILICON_NETHERITE_BOOTS,ModItems.SILICON_NETHERITE_HELMET))
+                .build(consumer, "advancedalloys" + "/got_silicon_netherite_armor");
 
         Advancement getAllAdvancement = Advancement.Builder.create().parent(rootAdvancement)
                 .display(

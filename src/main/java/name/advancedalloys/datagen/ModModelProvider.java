@@ -23,11 +23,11 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MIXED_BLOCK);
+
         for(Block block : ModBlocks.alloy_blocks) {
-            blockStateModelGenerator.registerParentedItemModel(block, Identifier.of("advancedalloys","block/"+getRecipeName(block.asItem())));
+            blockStateModelGenerator.registerSimpleCubeAll(block);
         }
         blockStateModelGenerator.registerParentedItemModel(ModBlocks.ALLOY_BLASTER, Identifier.of("advancedalloys","block/"+getRecipeName(ModBlocks.ALLOY_BLASTER.asItem())));
-        blockStateModelGenerator.registerParentedItemModel(ModBlocks.MIXED_BLOCK, Identifier.of("advancedalloys","block/"+getRecipeName(ModBlocks.MIXED_BLOCK.asItem())));
     }
 
     @Override

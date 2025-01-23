@@ -1,0 +1,57 @@
+{
+  "parent": "minecraft:advancedalloys/got_silicon_netherite",
+  "criteria": {
+    "got_silicon_netherite_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_leggings"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_boots"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Get a full set of Silicon Netherite Armor"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:silicon_netherite_chestplate",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Nicer Netherite Armor"
+    }
+  },
+  "requirements": [
+    [
+      "got_silicon_netherite_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "sends_telemetry_event": true
+}

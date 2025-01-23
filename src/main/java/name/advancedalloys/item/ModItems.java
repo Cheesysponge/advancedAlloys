@@ -73,6 +73,12 @@ public class ModItems {
     public static final Item SILICON_SHOVEL = registerItem("silicon_shovel", new ShovelItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_HOE = registerItem("silicon_hoe", new ModHoeItem(ModToolMaterials.SILICON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
+    public static final Item SILICON_NETHERITE_SWORD = registerItem("silicon_netherite_sword", new SwordItem(ModToolMaterials.SILICON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_NETHERITE_PICKAXE = registerItem("silicon_netherite_pickaxe", new PickaxeItem(ModToolMaterials.SILICON_NETHERITE,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_NETHERITE_AXE = registerItem("silicon_netherite_axe", new AxeItem(ModToolMaterials.SILICON_NETHERITE,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_NETHERITE_SHOVEL = registerItem("silicon_netherite_shovel", new ShovelItem(ModToolMaterials.SILICON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_NETHERITE_HOE = registerItem("silicon_netherite_hoe", new ModHoeItem(ModToolMaterials.SILICON_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
     public static final Item KATANA = registerItem("katana", new ModKatanaItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_SULFATE = registerItem("silicon_sulfate", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
@@ -88,7 +94,7 @@ public class ModItems {
             COPPER_NETHERITE_SWORD, COPPER_NETHERITE_PICKAXE, COPPER_NETHERITE_AXE, COPPER_NETHERITE_SHOVEL, COPPER_NETHERITE_HOE,
             IRON_NETHERITE_SWORD, IRON_NETHERITE_PICKAXE, IRON_NETHERITE_AXE, IRON_NETHERITE_SHOVEL, IRON_NETHERITE_HOE,
             OXIDIZED_COPPER_SWORD, OXIDIZED_COPPER_PICKAXE, OXIDIZED_COPPER_AXE, OXIDIZED_COPPER_SHOVEL, OXIDIZED_COPPER_HOE,
-            SILICON_SWORD, SILICON_PICKAXE, SILICON_AXE, SILICON_SHOVEL, SILICON_HOE};
+            SILICON_SWORD, SILICON_PICKAXE, SILICON_AXE, SILICON_SHOVEL, SILICON_HOE,SILICON_NETHERITE_SWORD, SILICON_NETHERITE_PICKAXE, SILICON_NETHERITE_AXE, SILICON_NETHERITE_SHOVEL, SILICON_NETHERITE_HOE};
 
 
     // Armors
@@ -132,6 +138,11 @@ public class ModItems {
     public static final Item SILICON_LEGGINGS = registerItem("silicon_leggings", new ArmorItem(ModArmorMaterials.SILICON, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
     public static final Item SILICON_BOOTS = registerItem("silicon_boots", new ArmorItem(ModArmorMaterials.SILICON, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
+    public static final Item SILICON_NETHERITE_HELMET = registerItem("silicon_netherite_helmet", new ArmorItem(ModArmorMaterials.SILICON_NETHERITE, ArmorItem.Type.HELMET,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item SILICON_NETHERITE_CHESTPLATE = registerItem("silicon_netherite_chestplate", new ArmorItem(ModArmorMaterials.SILICON_NETHERITE, ArmorItem.Type.CHESTPLATE,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item SILICON_NETHERITE_LEGGINGS = registerItem("silicon_netherite_leggings", new ArmorItem(ModArmorMaterials.SILICON_NETHERITE, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+    public static final Item SILICON_NETHERITE_BOOTS = registerItem("silicon_netherite_boots", new ArmorItem(ModArmorMaterials.SILICON_NETHERITE, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
+
     public static final Item[] armor = new Item[] {COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS,
             COPPER_IRON_HELMET, COPPER_IRON_CHESTPLATE, COPPER_IRON_LEGGINGS, COPPER_IRON_BOOTS,
             COPPER_GOLD_HELMET, COPPER_GOLD_CHESTPLATE, COPPER_GOLD_LEGGINGS, COPPER_GOLD_BOOTS,
@@ -139,8 +150,8 @@ public class ModItems {
             IRON_NETHERITE_HELMET, IRON_NETHERITE_CHESTPLATE, IRON_NETHERITE_LEGGINGS, IRON_NETHERITE_BOOTS,
             COPPER_NETHERITE_HELMET, COPPER_NETHERITE_CHESTPLATE, COPPER_NETHERITE_LEGGINGS, COPPER_NETHERITE_BOOTS,
             OXIDIZED_COPPER_HELMET, OXIDIZED_COPPER_CHESTPLATE, OXIDIZED_COPPER_LEGGINGS, OXIDIZED_COPPER_BOOTS,
-            SILICON_HELMET, SILICON_CHESTPLATE, SILICON_LEGGINGS, SILICON_BOOTS};
-
+            SILICON_HELMET, SILICON_CHESTPLATE, SILICON_LEGGINGS, SILICON_BOOTS,
+            SILICON_NETHERITE_HELMET, SILICON_NETHERITE_CHESTPLATE, SILICON_NETHERITE_LEGGINGS, SILICON_NETHERITE_BOOTS};
 
     private static Item registerItem(String name, Item item, ItemGroup group) {
 //        addToItemGroup(group,item);

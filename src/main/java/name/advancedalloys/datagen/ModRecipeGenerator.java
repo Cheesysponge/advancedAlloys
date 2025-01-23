@@ -10,13 +10,17 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
 import java.util.Objects;
 import java.util.function.Consumer;
+
+import static net.minecraft.item.Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE;
 
 public class ModRecipeGenerator extends FabricRecipeProvider {
     public ModRecipeGenerator(FabricDataOutput dataOutput) {
@@ -62,15 +66,68 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         for(int i = 0; i<ModBlocks.alloy_blocks.length; i++) {
             recipeGenerator(exporter, Item.fromBlock(ModBlocks.alloy_blocks[i]));
         }
-        recipeGenerator(exporter, Items.OXIDIZED_COPPER);
+        recipeGenerator(exporter, Items.OXIDIZED_COPPER);}
+
+    public void smithingRecipeGenerator(Consumer<RecipeJsonProvider> exporter, Item first) {
+        Item ingot = Items.BARRIER;
+        Item base = Items.BARRIER;
+        String itemName = getRecipeName(first);
+        if(itemName.contains("copper_netherite")) {
+            ingot = ModItems.COPPER_NETHERITE_INGOT;
+        }
+        else if(itemName.contains("iron_netherite")) {
+            ingot = ModItems.IRON_NETHERITE_INGOT;
+        }
+        else if(itemName.contains("silicon_netherite")) {
+            ingot = ModItems.SILICON_NETHERITE_INGOT;
+        }
+
+        if(itemName.contains("helmet")) {
+            base = Items.DIAMOND_HELMET;
+        }
+        else if(itemName.contains("chestplate")) {
+            base = Items.DIAMOND_CHESTPLATE;
+        }
+        else if(itemName.contains("leggings")) {
+            base = Items.DIAMOND_LEGGINGS;
+        }
+        else if(itemName.contains("boots")) {
+            base = Items.DIAMOND_BOOTS;
+        }
+        else if(itemName.contains("pickaxe")) {
+            base = Items.DIAMOND_PICKAXE;
+        }
+        else if(itemName.contains("axe")) {
+            base = Items.DIAMOND_AXE;
+        }
+        else if(itemName.contains("sword")) {
+            base = Items.DIAMOND_SWORD;
+        }
+        else if(itemName.contains("shovel")) {
+            base = Items.DIAMOND_SHOVEL;
+        }
+        else if(itemName.contains("hoe")) {
+            base = Items.DIAMOND_HOE;
+        }
+
+
+        if(base != Items.BARRIER && ingot !=Items.BARRIER) {
+            SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                            Ingredient.ofItems(base), Ingredient.ofItems(ingot), RecipeCategory.COMBAT, first)
+                    .criterion(FabricRecipeProvider.hasItem(base),
+                            FabricRecipeProvider.conditionsFromItem(base))
+                    .criterion(FabricRecipeProvider.hasItem(ingot),
+                            FabricRecipeProvider.conditionsFromItem(ingot))
+            .offerTo(exporter, new Identifier("generated_smithing_" + itemName));
+        }
+
     }
 
-
     public void recipeGenerator(Consumer<RecipeJsonProvider> exporter, Item Output){
-
+        smithingRecipeGenerator(exporter, Output);
         Item First = Items.BARRIER;
         String OutName = getRecipeName(Output);
-        AdvancedAlloys.LOGGER.info("Out: " + OutName);
+        AdvancedAlloys.LOGGER.info("Recipe Generated for: " + OutName);
 
         if(OutName.contains("copper_iron")) {
             First = ModItems.COPPER_IRON_INGOT;
@@ -92,6 +149,9 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         }
         else if(OutName.contains("iron_netherite")) {
             First = ModItems.IRON_NETHERITE_INGOT;
+        }
+        else if(getRecipeName(Output).contains("silicon_netherite")) {
+            First = ModItems.SILICON_NETHERITE_INGOT;
         }
         else if(getRecipeName(Output).contains("silicon")) {
             First = ModItems.SILICON_INGOT;
@@ -225,15 +285,13 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                     .criterion(FabricRecipeProvider.hasItem(First),
                             FabricRecipeProvider.conditionsFromItem(First))
                     .offerTo(exporter, new Identifier("generated_" + FabricRecipeProvider.getRecipeName(Output)));
-            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, First)
+            ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, First,9)
                     .input(Output)
                     .criterion(FabricRecipeProvider.hasItem(Output),
                             FabricRecipeProvider.conditionsFromItem(Output))
                     .offerTo(exporter, new Identifier("generated_craft_" + FabricRecipeProvider.getRecipeName(First)));
         }
 
-    }
-    public void recipeGenerator(Item First, Item Second, String type, Consumer<RecipeJsonProvider> exporter){
     }
 
 }

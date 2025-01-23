@@ -22,49 +22,55 @@ public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
         map.put(Type.LEGGINGS, 4);
         map.put(Type.CHESTPLATE, 5);
         map.put(Type.HELMET, 2);
-    }), 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    }), 18, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
     COPPER_IRON("copper_iron", 20, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 2);
         map.put(Type.LEGGINGS, 5);
         map.put(Type.CHESTPLATE, 6);
         map.put(Type.HELMET, 2);
-    }), 18, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.5f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_IRON_INGOT)),
+    }), 18, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 1.5f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_IRON_INGOT)),
     COPPER_GOLD("copper_gold", 20, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 2);
         map.put(Type.LEGGINGS, 4);
         map.put(Type.CHESTPLATE, 6);
         map.put(Type.HELMET, 2);
-    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT)),
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.COPPER_GOLD_INGOT)),
     GOLD_IRON("gold_iron", 15, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 2);
         map.put(Type.LEGGINGS, 5);
         map.put(Type.CHESTPLATE, 6);
         map.put(Type.HELMET, 2);
-    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
+    }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
     COPPER_NETHERITE("copper_netherite", 42, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 0.05f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.05f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
     IRON_NETHERITE("iron_netherite", 35, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.IRON_NETHERITE_INGOT)),
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.IRON_NETHERITE_INGOT)),
     OXIDIZED_COPPER("oxidized_copper", 20, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 7);
         map.put(Type.HELMET, 3);
-    }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3f, 1f, () -> Ingredient.ofItems(ModItems.OXIDIZED_COPPER_INGOT)),
+    }), 100, SoundEvents.ITEM_AXE_SCRAPE, 3f, 1f, () -> Ingredient.ofItems(ModItems.OXIDIZED_COPPER_INGOT)),
     SILICON("silicon", 33, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 2f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_INGOT)),;
+    }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_INGOT)),
+    SILICON_NETHERITE("silicon_netherite", 36, Util.make(new EnumMap(Type.class), (map) -> {
+        map.put(Type.BOOTS, 3);
+        map.put(Type.LEGGINGS, 6);
+        map.put(Type.CHESTPLATE, 8);
+        map.put(Type.HELMET, 3);
+    }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.25f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_NETHERITE_INGOT));
 
 
 //    LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {

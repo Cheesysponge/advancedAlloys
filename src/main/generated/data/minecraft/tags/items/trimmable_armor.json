@@ -32,6 +32,10 @@
     "advancedalloys:silicon_helmet",
     "advancedalloys:silicon_chestplate",
     "advancedalloys:silicon_leggings",
-    "advancedalloys:silicon_boots"
+    "advancedalloys:silicon_boots",
+    "advancedalloys:silicon_netherite_helmet",
+    "advancedalloys:silicon_netherite_chestplate",
+    "advancedalloys:silicon_netherite_leggings",
+    "advancedalloys:silicon_netherite_boots"
   ]
 }
