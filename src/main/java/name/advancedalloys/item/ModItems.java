@@ -30,6 +30,8 @@ public class ModItems {
     public static final Item COPPER_AXE = registerItem("copper_axe", new AxeItem(ModToolMaterials.COPPER,6,-3.1f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
     public static final Item COPPER_SHOVEL = registerItem("copper_shovel", new ShovelItem(ModToolMaterials.COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
     public static final Item COPPER_HOE = registerItem("copper_hoe", new ModHoeItem(ModToolMaterials.COPPER,-2,-1.0f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
+    public static final Item COPPER_MULTITOOL = registerItem("copper_multitool", new MultiTool(ModToolMaterials.COPPER,-3,-2.1f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
+
 
     public static final Item COPPER_IRON_SWORD = registerItem("copper_iron_sword", new SwordItem(ModToolMaterials.COPPER_IRON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_IRON_PICKAXE = registerItem("copper_iron_pickaxe", new PickaxeItem(ModToolMaterials.COPPER_IRON,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
@@ -94,7 +96,9 @@ public class ModItems {
             COPPER_NETHERITE_SWORD, COPPER_NETHERITE_PICKAXE, COPPER_NETHERITE_AXE, COPPER_NETHERITE_SHOVEL, COPPER_NETHERITE_HOE,
             IRON_NETHERITE_SWORD, IRON_NETHERITE_PICKAXE, IRON_NETHERITE_AXE, IRON_NETHERITE_SHOVEL, IRON_NETHERITE_HOE,
             OXIDIZED_COPPER_SWORD, OXIDIZED_COPPER_PICKAXE, OXIDIZED_COPPER_AXE, OXIDIZED_COPPER_SHOVEL, OXIDIZED_COPPER_HOE,
-            SILICON_SWORD, SILICON_PICKAXE, SILICON_AXE, SILICON_SHOVEL, SILICON_HOE,SILICON_NETHERITE_SWORD, SILICON_NETHERITE_PICKAXE, SILICON_NETHERITE_AXE, SILICON_NETHERITE_SHOVEL, SILICON_NETHERITE_HOE};
+            SILICON_SWORD, SILICON_PICKAXE, SILICON_AXE, SILICON_SHOVEL, SILICON_HOE,SILICON_NETHERITE_SWORD,
+            SILICON_NETHERITE_PICKAXE, SILICON_NETHERITE_AXE, SILICON_NETHERITE_SHOVEL, SILICON_NETHERITE_HOE,
+            COPPER_MULTITOOL};
 
 
     // Armors

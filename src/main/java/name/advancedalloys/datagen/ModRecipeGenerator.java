@@ -214,6 +214,19 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                             FabricRecipeProvider.conditionsFromItem(First))
                     .offerTo(exporter, new Identifier("generated_" + FabricRecipeProvider.getRecipeName(Output)));
         }
+        if(getRecipeName(Output).contains("multitool")) {
+            ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Output)
+                    .pattern("###")
+                    .pattern("#I#")
+                    .pattern("I##")
+                    .input('I', Items.STICK)
+                    .input('#', First)
+                    .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                            FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                    .criterion(FabricRecipeProvider.hasItem(First),
+                            FabricRecipeProvider.conditionsFromItem(First))
+                    .offerTo(exporter, new Identifier("generated_" + FabricRecipeProvider.getRecipeName(Output)));
+        }
         if(getRecipeName(Output).contains("shovel")) {
             ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, Output)
                     .pattern("#")
