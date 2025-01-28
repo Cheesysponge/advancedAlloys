@@ -11,7 +11,7 @@ public class MultiTool extends MiningToolItem {
     public static final TagKey<Block> MULTI_TAG = TagKey.of(RegistryKeys.BLOCK, new Identifier(AdvancedAlloys.MOD_ID, "multi_tag"));
 
 
-    public MultiTool(ToolMaterial material, float attackSpeed, float attackDamage, Settings settings) {
+    public MultiTool(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(attackDamage, attackSpeed, material, MULTI_TAG, settings);
     }
 }

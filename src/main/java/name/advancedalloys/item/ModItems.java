@@ -30,7 +30,7 @@ public class ModItems {
     public static final Item COPPER_AXE = registerItem("copper_axe", new AxeItem(ModToolMaterials.COPPER,6,-3.1f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
     public static final Item COPPER_SHOVEL = registerItem("copper_shovel", new ShovelItem(ModToolMaterials.COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
     public static final Item COPPER_HOE = registerItem("copper_hoe", new ModHoeItem(ModToolMaterials.COPPER,-2,-1.0f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
-    public static final Item COPPER_MULTITOOL = registerItem("copper_multitool", new MultiTool(ModToolMaterials.COPPER,-3,-2.1f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
+    public static final Item COPPER_MULTITOOL = registerItem("copper_multitool", new MultiTool(ModToolMaterials.COPPER,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.COMMON)), ModItemGroup.TOOLS);
 
 
     public static final Item COPPER_IRON_SWORD = registerItem("copper_iron_sword", new SwordItem(ModToolMaterials.COPPER_IRON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
@@ -38,30 +38,38 @@ public class ModItems {
     public static final Item COPPER_IRON_AXE = registerItem("copper_iron_axe", new AxeItem(ModToolMaterials.COPPER_IRON,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_IRON_SHOVEL = registerItem("copper_iron_shovel", new ShovelItem(ModToolMaterials.COPPER_IRON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_IRON_HOE = registerItem("copper_iron_hoe", new ModHoeItem(ModToolMaterials.COPPER_IRON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item COPPER_IRON_MULTITOOL = registerItem("copper_iron_multitool", new MultiTool(ModToolMaterials.COPPER_IRON,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
     public static final Item COPPER_GOLD_SWORD = registerItem("copper_gold_sword", new SwordItem(ModToolMaterials.COPPER_GOLD,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_GOLD_PICKAXE = registerItem("copper_gold_pickaxe", new PickaxeItem(ModToolMaterials.COPPER_GOLD,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_GOLD_AXE = registerItem("copper_gold_axe", new AxeItem(ModToolMaterials.COPPER_GOLD,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_GOLD_SHOVEL = registerItem("copper_gold_shovel", new ShovelItem(ModToolMaterials.COPPER_GOLD,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_GOLD_HOE = registerItem("copper_gold_hoe", new ModHoeItem(ModToolMaterials.COPPER_GOLD,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item COPPER_GOLD_MULTITOOL = registerItem("copper_gold_multitool", new MultiTool(ModToolMaterials.COPPER_GOLD,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
 
     public static final Item GOLD_IRON_SWORD = registerItem("gold_iron_sword", new SwordItem(ModToolMaterials.GOLD_IRON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item GOLD_IRON_PICKAXE = registerItem("gold_iron_pickaxe", new PickaxeItem(ModToolMaterials.GOLD_IRON,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item GOLD_IRON_AXE = registerItem("gold_iron_axe", new AxeItem(ModToolMaterials.GOLD_IRON,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item GOLD_IRON_SHOVEL = registerItem("gold_iron_shovel", new ShovelItem(ModToolMaterials.GOLD_IRON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item GOLD_IRON_HOE = registerItem("gold_iron_hoe", new ModHoeItem(ModToolMaterials.GOLD_IRON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item GOLD_IRON_MULTITOOL = registerItem("gold_iron_multitool", new MultiTool(ModToolMaterials.GOLD_IRON,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
 
     public static final Item COPPER_NETHERITE_SWORD = registerItem("copper_netherite_sword", new SwordItem(ModToolMaterials.COPPER_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_NETHERITE_PICKAXE = registerItem("copper_netherite_pickaxe", new PickaxeItem(ModToolMaterials.COPPER_NETHERITE,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_NETHERITE_AXE = registerItem("copper_netherite_axe", new AxeItem(ModToolMaterials.COPPER_NETHERITE,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_NETHERITE_SHOVEL = registerItem("copper_netherite_shovel", new ShovelItem(ModToolMaterials.COPPER_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item COPPER_NETHERITE_HOE = registerItem("copper_netherite_hoe", new ModHoeItem(ModToolMaterials.COPPER_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item COPPER_NETHERITE_MULTITOOL = registerItem("copper_netherite_multitool", new MultiTool(ModToolMaterials.COPPER_NETHERITE,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
     public static final Item IRON_NETHERITE_SWORD = registerItem("iron_netherite_sword", new SwordItem(ModToolMaterials.IRON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item IRON_NETHERITE_PICKAXE = registerItem("iron_netherite_pickaxe", new PickaxeItem(ModToolMaterials.IRON_NETHERITE,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item IRON_NETHERITE_AXE = registerItem("iron_netherite_axe", new AxeItem(ModToolMaterials.IRON_NETHERITE,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item IRON_NETHERITE_SHOVEL = registerItem("iron_netherite_shovel", new ShovelItem(ModToolMaterials.IRON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item IRON_NETHERITE_HOE = registerItem("iron_netherite_hoe", new ModHoeItem(ModToolMaterials.IRON_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item IRON_NETHERITE_MULTITOOL = registerItem("iron_netherite_multitool", new MultiTool(ModToolMaterials.IRON_NETHERITE,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
 
     public static final Item OXIDIZED_COPPER_SWORD = registerItem("oxidized_copper_sword", new OxidizedCopperSwordItem(ModToolMaterials.OXIDIZED_COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item OXIDIZED_COPPER_PICKAXE = registerItem("oxidized_copper_pickaxe", new OxidizedCopperPickaxeItem(ModToolMaterials.OXIDIZED_COPPER,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
@@ -69,21 +77,24 @@ public class ModItems {
     public static final Item OXIDIZED_COPPER_SHOVEL = registerItem("oxidized_copper_shovel", new OxidizedCopperShovelItem(ModToolMaterials.OXIDIZED_COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item OXIDIZED_COPPER_HOE = registerItem("oxidized_copper_hoe", new OxidizedCopperHoeItem(ModToolMaterials.OXIDIZED_COPPER,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
+
     public static final Item SILICON_SWORD = registerItem("silicon_sword", new SwordItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_PICKAXE = registerItem("silicon_pickaxe", new PickaxeItem(ModToolMaterials.SILICON,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_AXE = registerItem("silicon_axe", new AxeItem(ModToolMaterials.SILICON,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_SHOVEL = registerItem("silicon_shovel", new ShovelItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_HOE = registerItem("silicon_hoe", new ModHoeItem(ModToolMaterials.SILICON,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_MULTITOOL = registerItem("silicon_multitool", new MultiTool(ModToolMaterials.SILICON,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
     public static final Item SILICON_NETHERITE_SWORD = registerItem("silicon_netherite_sword", new SwordItem(ModToolMaterials.SILICON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_NETHERITE_PICKAXE = registerItem("silicon_netherite_pickaxe", new PickaxeItem(ModToolMaterials.SILICON_NETHERITE,1,-2.8f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_NETHERITE_AXE = registerItem("silicon_netherite_axe", new AxeItem(ModToolMaterials.SILICON_NETHERITE,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_NETHERITE_SHOVEL = registerItem("silicon_netherite_shovel", new ShovelItem(ModToolMaterials.SILICON_NETHERITE,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_NETHERITE_HOE = registerItem("silicon_netherite_hoe", new ModHoeItem(ModToolMaterials.SILICON_NETHERITE,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item SILICON_NETHERITE_MULTITOOL = registerItem("silicon_netherite_multitool", new MultiTool(ModToolMaterials.SILICON_NETHERITE,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+
 
     public static final Item KATANA = registerItem("katana", new ModKatanaItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_SULFATE = registerItem("silicon_sulfate", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
-
     public static final Item SILICON_SULFATE_DETONATOR = registerItem("silicon_sulfate_detonator", new ExplosiveItem(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
 
@@ -98,7 +109,8 @@ public class ModItems {
             OXIDIZED_COPPER_SWORD, OXIDIZED_COPPER_PICKAXE, OXIDIZED_COPPER_AXE, OXIDIZED_COPPER_SHOVEL, OXIDIZED_COPPER_HOE,
             SILICON_SWORD, SILICON_PICKAXE, SILICON_AXE, SILICON_SHOVEL, SILICON_HOE,SILICON_NETHERITE_SWORD,
             SILICON_NETHERITE_PICKAXE, SILICON_NETHERITE_AXE, SILICON_NETHERITE_SHOVEL, SILICON_NETHERITE_HOE,
-            COPPER_MULTITOOL};
+            COPPER_MULTITOOL,COPPER_IRON_MULTITOOL,COPPER_GOLD_MULTITOOL,GOLD_IRON_MULTITOOL,COPPER_NETHERITE_MULTITOOL,
+            IRON_NETHERITE_MULTITOOL,SILICON_MULTITOOL,SILICON_NETHERITE_MULTITOOL};
 
 
     // Armors

@@ -20,7 +20,7 @@
   "item.advancedalloys.copper_hoe": "Copper Hoe",
   "item.advancedalloys.copper_shovel": "Copper Shovel",
   "item.advancedalloys.copper_sword": "Copper Sword",
-  "item.advancedalloys.copper_multitool": "Copper Piaxhovel",
+  "item.advancedalloys.copper_multitool": "Copper Piaxelo",
 
 
   "item.advancedalloys.oxidized_copper_axe": "Oxidized Copper Axe",
@@ -34,42 +34,55 @@
   "item.advancedalloys.copper_iron_hoe": "Copper Iron Hoe",
   "item.advancedalloys.copper_iron_shovel": "Copper Iron Shovel",
   "item.advancedalloys.copper_iron_sword": "Copper Iron Sword",
+  "item.advancedalloys.copper_iron_multitool": "Copper Iron Piaxelo",
 
   "item.advancedalloys.copper_gold_axe": "Copper Gold Axe",
   "item.advancedalloys.copper_gold_pickaxe": "Copper Gold Pickaxe",
   "item.advancedalloys.copper_gold_hoe": "Copper Gold Hoe",
   "item.advancedalloys.copper_gold_shovel": "Copper Gold Shovel",
   "item.advancedalloys.copper_gold_sword": "Copper Gold Sword",
+  "item.advancedalloys.copper_gold_multitool": "Copper Gold Piaxelo",
+
 
   "item.advancedalloys.gold_iron_axe": "Gold Iron Axe",
   "item.advancedalloys.gold_iron_pickaxe": "Gold Iron Pickaxe",
   "item.advancedalloys.gold_iron_hoe": "Gold Iron Hoe",
   "item.advancedalloys.gold_iron_shovel": "Gold Iron Shovel",
   "item.advancedalloys.gold_iron_sword": "Gold Iron Sword",
+  "item.advancedalloys.gold_iron_multitool": "Gold Iron Piaxelo",
+
 
   "item.advancedalloys.iron_netherite_axe": "Iron Netherite Axe",
   "item.advancedalloys.iron_netherite_pickaxe": "Iron Netherite Pickaxe",
   "item.advancedalloys.iron_netherite_hoe": "Iron Netherite Hoe",
   "item.advancedalloys.iron_netherite_shovel": "Iron Netherite Shovel",
   "item.advancedalloys.iron_netherite_sword": "Iron Netherite Sword",
+  "item.advancedalloys.iron_netherite_multitool": "Iron Netherite Piaxelo",
+
 
   "item.advancedalloys.copper_netherite_axe": "Copper Netherite Axe",
   "item.advancedalloys.copper_netherite_pickaxe": "Copper Netherite Pickaxe",
   "item.advancedalloys.copper_netherite_hoe": "Copper Netherite Hoe",
   "item.advancedalloys.copper_netherite_shovel": "Copper Netherite Shovel",
   "item.advancedalloys.copper_netherite_sword": "Copper Netherite Sword",
+  "item.advancedalloys.copper_netherite_multitool": "Copper Netherite Piaxelo",
+
 
   "item.advancedalloys.silicon_axe": "Silicon Axe",
   "item.advancedalloys.silicon_pickaxe": "Silicon Pickaxe",
   "item.advancedalloys.silicon_hoe": "Silicon Hoe",
   "item.advancedalloys.silicon_shovel": "Silicon Shovel",
   "item.advancedalloys.silicon_sword": "Silicon Sword",
+  "item.advancedalloys.silicon_multitool": "Silicon Piaxelo",
+
 
   "item.advancedalloys.silicon_netherite_axe": "Silicon Netherite Axe",
   "item.advancedalloys.silicon_netherite_pickaxe": "Silicon Netherite Pickaxe",
   "item.advancedalloys.silicon_netherite_hoe": "Silicon Netherite Hoe",
   "item.advancedalloys.silicon_netherite_shovel": "Silicon Netherite Shovel",
   "item.advancedalloys.silicon_netherite_sword": "Silicon Netherite Sword",
+  "item.advancedalloys.silicon_netherite_multitool": "Silicon Netherite Piaxelo",
+
 
 
   "item.advancedalloys.copper_helmet": "Copper Helmet",

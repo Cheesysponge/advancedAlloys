@@ -70,7 +70,7 @@ public class ModItemGroup {
                     }).build());
     public static final ItemGroup SPECIAL = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdvancedAlloys.MOD_ID, "special"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.advancedalloys.armor"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemGroup.advancedalloys.special"))
                     .icon(() -> new ItemStack(ModItems.SILICON_SULFATE)).entries((displayContext, entries) -> {
                         entries.add(ModItems.SILICON_SULFATE);
                         entries.add(ModItems.SILICON_SULFATE_DETONATOR);
