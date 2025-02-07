@@ -21,7 +21,7 @@ public class OxidizedCopperAxeItem extends AxeItem {
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if(!world.isClient()){
+        if(!world.isClient()&&selected){
 
             entity.timeUntilRegen = 0;
         }

@@ -19,7 +19,14 @@ public class OxidizedCopperSwordItem extends SwordItem {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if(!world.isClient()&&selected){
 
+            entity.timeUntilRegen = 0;
+        }
+        super.inventoryTick(stack, world, entity, slot, selected);
+    }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {

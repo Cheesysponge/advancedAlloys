@@ -1,6 +1,7 @@
 package name.advancedalloys.item.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.LivingEntity;
@@ -15,7 +16,14 @@ public class OxidizedCopperPickaxeItem extends PickaxeItem {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        if(!world.isClient()&&selected){
 
+            entity.timeUntilRegen = 0;
+        }
+        super.inventoryTick(stack, world, entity, slot, selected);
+    }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
