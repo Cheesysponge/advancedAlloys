@@ -1,0 +1,82 @@
+{
+  "parent": "minecraft:advancedalloys/root",
+  "criteria": {
+    "piaxelo": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "advancedalloys:copper_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_iron_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_gold_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:gold_iron_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:copper_netherite_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:iron_netherite_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:silicon_netherite_multitool"
+            ]
+          },
+          {
+            "items": [
+              "advancedalloys:oxidized_copper_multitool"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "A Powerful Combo Tool - With an Odd Name"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "advancedalloys:silicon_netherite_multitool",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Collect all the Piaxelos"
+    }
+  },
+  "requirements": [
+    [
+      "piaxelo"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

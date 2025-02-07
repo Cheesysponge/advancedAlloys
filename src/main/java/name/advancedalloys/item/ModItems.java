@@ -76,6 +76,7 @@ public class ModItems {
     public static final Item OXIDIZED_COPPER_AXE = registerItem("oxidized_copper_axe", new OxidizedCopperAxeItem(ModToolMaterials.OXIDIZED_COPPER,6,-3.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item OXIDIZED_COPPER_SHOVEL = registerItem("oxidized_copper_shovel", new OxidizedCopperShovelItem(ModToolMaterials.OXIDIZED_COPPER,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item OXIDIZED_COPPER_HOE = registerItem("oxidized_copper_hoe", new OxidizedCopperHoeItem(ModToolMaterials.OXIDIZED_COPPER,-2,-1.0f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item OXIDIZED_COPPER_MULTITOOL = registerItem("oxidized_copper_multitool", new OxidizedCopperMultiTool(ModToolMaterials.OXIDIZED_COPPER,2.5f,-2.1f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
 
 
     public static final Item SILICON_SWORD = registerItem("silicon_sword", new SwordItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
@@ -99,8 +100,9 @@ public class ModItems {
 
 
 
-
-    public static final Item[] tools = new Item[] {COPPER_SWORD, COPPER_PICKAXE, COPPER_AXE, COPPER_SHOVEL, COPPER_HOE,
+    public static final Item[] multi_tools = {COPPER_MULTITOOL,COPPER_IRON_MULTITOOL,COPPER_GOLD_MULTITOOL,GOLD_IRON_MULTITOOL,COPPER_NETHERITE_MULTITOOL,
+            IRON_NETHERITE_MULTITOOL,SILICON_MULTITOOL,SILICON_NETHERITE_MULTITOOL, OXIDIZED_COPPER_MULTITOOL};
+    public static final Item[] tools = {COPPER_SWORD, COPPER_PICKAXE, COPPER_AXE, COPPER_SHOVEL, COPPER_HOE,
             COPPER_IRON_SWORD, COPPER_IRON_PICKAXE, COPPER_IRON_AXE, COPPER_IRON_SHOVEL, COPPER_IRON_HOE,
             COPPER_GOLD_SWORD, COPPER_GOLD_PICKAXE, COPPER_GOLD_AXE, COPPER_GOLD_SHOVEL, COPPER_GOLD_HOE,
             GOLD_IRON_SWORD, GOLD_IRON_PICKAXE, GOLD_IRON_AXE, GOLD_IRON_SHOVEL, GOLD_IRON_HOE,
@@ -110,7 +112,7 @@ public class ModItems {
             SILICON_SWORD, SILICON_PICKAXE, SILICON_AXE, SILICON_SHOVEL, SILICON_HOE,SILICON_NETHERITE_SWORD,
             SILICON_NETHERITE_PICKAXE, SILICON_NETHERITE_AXE, SILICON_NETHERITE_SHOVEL, SILICON_NETHERITE_HOE,
             COPPER_MULTITOOL,COPPER_IRON_MULTITOOL,COPPER_GOLD_MULTITOOL,GOLD_IRON_MULTITOOL,COPPER_NETHERITE_MULTITOOL,
-            IRON_NETHERITE_MULTITOOL,SILICON_MULTITOOL,SILICON_NETHERITE_MULTITOOL};
+            IRON_NETHERITE_MULTITOOL,SILICON_MULTITOOL,SILICON_NETHERITE_MULTITOOL, OXIDIZED_COPPER_MULTITOOL};
 
 
     // Armors
@@ -159,7 +161,7 @@ public class ModItems {
     public static final Item SILICON_NETHERITE_LEGGINGS = registerItem("silicon_netherite_leggings", new ArmorItem(ModArmorMaterials.SILICON_NETHERITE, ArmorItem.Type.LEGGINGS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
     public static final Item SILICON_NETHERITE_BOOTS = registerItem("silicon_netherite_boots", new ArmorItem(ModArmorMaterials.SILICON_NETHERITE, ArmorItem.Type.BOOTS,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.ARMOR);
 
-    public static final Item[] armor = new Item[] {COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS,
+    public static final Item[] armor = {COPPER_HELMET, COPPER_CHESTPLATE, COPPER_LEGGINGS, COPPER_BOOTS,
             COPPER_IRON_HELMET, COPPER_IRON_CHESTPLATE, COPPER_IRON_LEGGINGS, COPPER_IRON_BOOTS,
             COPPER_GOLD_HELMET, COPPER_GOLD_CHESTPLATE, COPPER_GOLD_LEGGINGS, COPPER_GOLD_BOOTS,
             GOLD_IRON_HELMET, GOLD_IRON_CHESTPLATE, GOLD_IRON_LEGGINGS, GOLD_IRON_BOOTS,

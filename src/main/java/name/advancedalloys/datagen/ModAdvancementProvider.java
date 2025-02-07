@@ -40,6 +40,20 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                 .criterion("got_blaster", InventoryChangedCriterion.Conditions.items(ModBlocks.ALLOY_BLASTER))
                 .build(consumer, "advancedalloys" + "/root");
+        Advancement piaxelo = Advancement.Builder.create().parent(rootAdvancement)
+                .display(
+                        ModItems.SILICON_NETHERITE_MULTITOOL,
+                        Text.literal("Collect all the Piaxelos"),
+                        Text.literal("A Powerful Combo Tool - With an Odd Name"),
+                        null, // children to parent advancements don't need a background set
+                        AdvancementFrame.CHALLENGE,
+                        true,
+                        true,
+                        false
+                )
+                .rewards(AdvancementRewards.Builder.experience(100))
+                .criterion("piaxelo", InventoryChangedCriterion.Conditions.items(ModItems.multi_tools))
+                .build(consumer, "advancedalloys" + "/piaxelo");
         Advancement getCopperAdvancement = Advancement.Builder.create().parent(rootAdvancement)
                 .display(
                         Items.COPPER_INGOT,
