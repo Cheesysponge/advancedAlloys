@@ -6,6 +6,7 @@ import name.advancedalloys.item.ModItemGroup;
 import name.advancedalloys.item.ModItems;
 import name.advancedalloys.recipe.ModRecipes;
 import name.advancedalloys.screen.ModScreenHandlers;
+import name.advancedalloys.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Items;
 import org.slf4j.Logger;
@@ -23,6 +24,7 @@ public class AdvancedAlloys implements ModInitializer {
         ModScreenHandlers.registerAllScreenHandlers();
         ModRecipes.registerRecipes();
         ModBlockEntities.registerAllBlockEntities();
+        ModLootTableModifiers.modifyLootTables();
     }
 
 

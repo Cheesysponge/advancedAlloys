@@ -75,6 +75,11 @@ public class ModItemGroup {
                         entries.add(ModItems.SILICON_SULFATE);
                         entries.add(ModItems.SILICON_SULFATE_DETONATOR);
                         entries.add(ModItems.KATANA);
+                        entries.add(ModItems.ELDER_GUARDIAN_EYE);
+                        entries.add(ModItems.ELDER_GUARDIAN_SCALE);
+
+                        entries.add(ModItems.BETRAYER);
+
                     }).build());
     public static final ItemGroup BLOCKS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(AdvancedAlloys.MOD_ID, "blocks"),
@@ -83,12 +88,6 @@ public class ModItemGroup {
                         for(int i = 0; i<ModBlocks.alloy_blocks.length;i++){
                             entries.add(ModBlocks.alloy_blocks[i]);
                         }
-//                        entries.add(ModBlocks.COPPER_IRON_BLOCK);
-//                        entries.add(ModBlocks.COPPER_GOLD_BLOCK);
-//                        entries.add(ModBlocks.GOLD_IRON_BLOCK);
-//                        entries.add(ModBlocks.COPPER_NETHERITE_BLOCK);
-//                        entries.add(ModBlocks.IRON_NETHERITE_BLOCK);
-//                        entries.add(ModBlocks.SILICON_BLOCK);
                         entries.add(ModBlocks.ALLOY_BLASTER);
                         entries.add(ModBlocks.MIXED_BLOCK);
 

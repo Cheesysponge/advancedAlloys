@@ -97,6 +97,11 @@ public class ModItems {
     public static final Item KATANA = registerItem("katana", new ModKatanaItem(ModToolMaterials.SILICON,3,-2.4f,new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_SULFATE = registerItem("silicon_sulfate", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
     public static final Item SILICON_SULFATE_DETONATOR = registerItem("silicon_sulfate_detonator", new ExplosiveItem(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.TOOLS);
+    public static final Item BETRAYER = registerItem("betrayer", new ModBetrayerItem(ModToolMaterials.GUARDIAN,4,-3f,new FabricItemSettings().rarity(Rarity.EPIC).maxCount(1)), ModItemGroup.SPECIAL);
+    public static final Item ELDER_GUARDIAN_EYE = registerItem("elder_guardian_eye", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.SPECIAL);
+    public static final Item ELDER_GUARDIAN_SCALE = registerItem("elder_guardian_scale", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON).maxCount(1)), ModItemGroup.SPECIAL);
+
+
 
 
 

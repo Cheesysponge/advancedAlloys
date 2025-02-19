@@ -44,7 +44,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                 .pattern(" O#")
                 .pattern("N#O")
                 .pattern("IN ")
-                .input('I', ModItems.IRON_NETHERITE_INGOT)
+                .input('I', ModItems.SILICON_NETHERITE_INGOT)
                 .input('#', ModBlocks.SILICON_BLOCK)
                 .input('N', ModItems.OXIDIZED_COPPER_INGOT)
                 .input('O', Items.IRON_BLOCK)
@@ -54,9 +54,26 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
                         FabricRecipeProvider.conditionsFromItem(ModBlocks.SILICON_BLOCK))
                 .criterion(FabricRecipeProvider.hasItem(ModItems.OXIDIZED_COPPER_INGOT),
                         FabricRecipeProvider.conditionsFromItem(ModItems.OXIDIZED_COPPER_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SILICON_NETHERITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.SILICON_NETHERITE_INGOT))
+                .offerTo(exporter, new Identifier("alternative_"+FabricRecipeProvider.getRecipeName(ModItems.KATANA)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BETRAYER)
+                .pattern(" ##")
+                .pattern("NO#")
+                .pattern("IN ")
+                .input('I', ModItems.IRON_NETHERITE_INGOT)
+                .input('#', ModItems.ELDER_GUARDIAN_SCALE)
+                .input('N', ModItems.SILICON_NETHERITE_INGOT)
+                .input('O', ModItems.ELDER_GUARDIAN_EYE)
                 .criterion(FabricRecipeProvider.hasItem(ModItems.IRON_NETHERITE_INGOT),
                         FabricRecipeProvider.conditionsFromItem(ModItems.IRON_NETHERITE_INGOT))
-                .offerTo(exporter, new Identifier("alternative_"+FabricRecipeProvider.getRecipeName(ModItems.KATANA)));
+                .criterion(FabricRecipeProvider.hasItem(ModItems.ELDER_GUARDIAN_SCALE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.ELDER_GUARDIAN_SCALE))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.SILICON_NETHERITE_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.SILICON_NETHERITE_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(ModItems.ELDER_GUARDIAN_EYE),
+                        FabricRecipeProvider.conditionsFromItem(ModItems.ELDER_GUARDIAN_EYE))
+                .offerTo(exporter, new Identifier("alternative_"+FabricRecipeProvider.getRecipeName(ModItems.BETRAYER)));
         for(int i = 0; i<ModItems.tools.length; i++) {
             recipeGenerator(exporter, ModItems.tools[i]);
         }

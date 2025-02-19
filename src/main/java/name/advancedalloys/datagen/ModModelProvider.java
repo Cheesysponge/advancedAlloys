@@ -43,6 +43,10 @@ public class ModModelProvider extends FabricModelProvider {
         }
 
         itemModelGenerator.register(ModItems.SILICON_SULFATE,Models.GENERATED);
+        itemModelGenerator.register(ModItems.ELDER_GUARDIAN_EYE,Models.GENERATED);
+        itemModelGenerator.register(ModItems.ELDER_GUARDIAN_SCALE,Models.GENERATED);
+
+
         itemModelGenerator.register(ModItems.SILICON_SULFATE_DETONATOR,Models.GENERATED);
 
     }
