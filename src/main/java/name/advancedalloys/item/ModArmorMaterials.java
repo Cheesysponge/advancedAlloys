@@ -41,13 +41,13 @@ public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
         map.put(Type.CHESTPLATE, 6);
         map.put(Type.HELMET, 2);
     }), 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1f, 0.0f, () -> Ingredient.ofItems(ModItems.GOLD_IRON_INGOT)),
-    COPPER_NETHERITE("copper_netherite", 42, Util.make(new EnumMap(Type.class), (map) -> {
+    COPPER_NETHERITE("copper_netherite", 48, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3f, 0.05f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
-    IRON_NETHERITE("iron_netherite", 35, Util.make(new EnumMap(Type.class), (map) -> {
+    }), 20, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.9f, 0.05f, () -> Ingredient.ofItems(ModItems.COPPER_NETHERITE_INGOT)),
+    IRON_NETHERITE("iron_netherite", 30, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
@@ -65,12 +65,12 @@ public enum  ModArmorMaterials implements StringIdentifiable,ArmorMaterial {
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
     }), 100, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 2f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_INGOT)),
-    SILICON_NETHERITE("silicon_netherite", 36, Util.make(new EnumMap(Type.class), (map) -> {
+    SILICON_NETHERITE("silicon_netherite", 38, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 3);
         map.put(Type.LEGGINGS, 6);
         map.put(Type.CHESTPLATE, 8);
         map.put(Type.HELMET, 3);
-    }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.25f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_NETHERITE_INGOT));
+    }), 30, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.3f, 0.0f, () -> Ingredient.ofItems(ModItems.SILICON_NETHERITE_INGOT));
 
 
 //    LEATHER("leather", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
