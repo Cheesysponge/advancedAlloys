@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "advancedalloys:elder_guardian_scale"
+    },
+    "I": {
+      "item": "advancedalloys:iron_netherite_ingot"
+    },
+    "N": {
+      "item": "advancedalloys:silicon_netherite_ingot"
+    },
+    "O": {
+      "item": "advancedalloys:elder_guardian_eye"
+    }
+  },
+  "pattern": [
+    " ##",
+    "NO#",
+    "IN "
+  ],
+  "result": {
+    "item": "advancedalloys:betrayer"
+  },
+  "show_notification": true
+}

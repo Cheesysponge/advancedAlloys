@@ -1,36 +1,36 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_iron_block": {
+    "has_elder_guardian_eye": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:iron_block"
+              "advancedalloys:elder_guardian_eye"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_oxidized_copper_ingot": {
+    "has_elder_guardian_scale": {
       "conditions": {
         "items": [
           {
             "items": [
-              "advancedalloys:oxidized_copper_ingot"
+              "advancedalloys:elder_guardian_scale"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_silicon_block": {
+    "has_iron_netherite_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "advancedalloys:silicon_block"
+              "advancedalloys:iron_netherite_ingot"
             ]
           }
         ]
@@ -51,23 +51,23 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:alternative_katana"
+        "recipe": "minecraft:alternative_betrayer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_iron_block",
-      "has_silicon_block",
-      "has_oxidized_copper_ingot",
+      "has_iron_netherite_ingot",
+      "has_elder_guardian_scale",
       "has_silicon_netherite_ingot",
+      "has_elder_guardian_eye",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:alternative_katana"
+      "minecraft:alternative_betrayer"
     ]
   },
   "sends_telemetry_event": false
