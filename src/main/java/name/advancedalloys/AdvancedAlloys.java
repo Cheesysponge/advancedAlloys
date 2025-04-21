@@ -4,6 +4,7 @@ import name.advancedalloys.block.ModBlocks;
 import name.advancedalloys.block.entity.ModBlockEntities;
 import name.advancedalloys.item.ModItemGroup;
 import name.advancedalloys.item.ModItems;
+import name.advancedalloys.particle.ModParticles;
 import name.advancedalloys.recipe.ModRecipes;
 import name.advancedalloys.screen.ModScreenHandlers;
 import name.advancedalloys.util.ModLootTableModifiers;
@@ -25,6 +26,7 @@ public class AdvancedAlloys implements ModInitializer {
         ModRecipes.registerRecipes();
         ModBlockEntities.registerAllBlockEntities();
         ModLootTableModifiers.modifyLootTables();
+        ModParticles.registerParticles();
     }
 
 

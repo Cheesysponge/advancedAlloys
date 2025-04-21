@@ -1,5 +1,6 @@
 package name.advancedalloys.item.custom;
 
+import name.advancedalloys.particle.ModParticles;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.particle.ParticleManager;
@@ -15,10 +16,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Box;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -73,6 +76,25 @@ public class ModBetrayerItem extends SwordItem {
     }
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        double d = (double) (-MathHelper.sin(attacker.getYaw() * (float) (Math.PI / 180.0)));
+        double e = (double) MathHelper.cos(attacker.getYaw() * (float) (Math.PI / 180.0));
+        boolean isCrit = attacker.fallDistance > 0.0F
+                && !attacker.isOnGround()
+                && !attacker.isClimbing()
+                && !attacker.isTouchingWater()
+                && !attacker.hasStatusEffect(StatusEffects.BLINDNESS)
+                && !attacker.hasVehicle()
+                && target != null;
+
+        if (attacker.getWorld() instanceof ServerWorld && !isCrit) {
+            ((ServerWorld) attacker.getWorld()).spawnParticles(ModParticles.GUARDIAN_SWEEP_PARTICLE, attacker.getX() + d, attacker.getBodyY(0.5), attacker.getZ() + e, 0, d, 0.0, e, 0.0);
+        } else {
+            if(!attacker.getWorld().isClient()) {
+                MinecraftClient.getInstance().particleManager.addEmitter(target, ModParticles.GUARDIAN_CRIT_PARTICLE);
+            }
+
+        }
+
         clearGlow(attacker);
         this.lastHit = target;
         target.damageArmor(attacker.getDamageSources().indirectMagic(attacker, attacker), 5);
